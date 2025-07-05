@@ -1,0 +1,16 @@
+Explain the difference between the GET and POST methods in form submission. When should each be used?
+
+--> The main difference between GET and POST methods in form submission lies in how data is transmitted to the server.
+
+--> GET : This method appends data to the URL as a query string, making it visible in the browser's address bar and potentially vulnerable.
+    Use : -> Retrieving data
+          -> Requests that are idempotent
+          -> Requests that can be bookmarked or cached
+          -> Requests with no side effects
+
+
+--> POST : This method sends data in the request body, keeping it hidden and more secure.
+    Use  : -> Sending data to create or update resources
+           -> Requests that modify server state
+           -> Requests with sensitive data
+           -> Requests with large amounts of data

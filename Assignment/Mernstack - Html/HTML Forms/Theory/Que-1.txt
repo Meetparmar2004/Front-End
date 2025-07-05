@@ -1,0 +1,24 @@
+What are HTML forms used for? Describe the purpose of the input, textarea, select, and button elements.
+
+--> HTML forms : Used to collect user input on web pages.
+
+
+
+--> <input> : The <input> element is the most versatile form element, used for various types of input, 
+                including :
+                    -> Text : For single-line text input ( e.g., names, email addresses ).
+                    -> Password : For secure input where characters are masked.
+                    -> Checkbox : For selecting one or more options from a list.
+                    -> Radio : For selecting only one option from a group of options.
+                    -> Submit : For submitting the form data.
+                    -> Other Types : File upload, numder, email, data, etc...
+
+--> <textarea> : The <textarea> element is used for multi-line text input, such as comments, reviews, or longer descriptions. 
+                 It allows user to enter text with multiple lines, unlike the single-line.
+
+--> <select> : The <select> element is used to create a dropdown list of options.
+               It allows users to choose a single option from a predefined list. 
+               It is commonly used for selecting items from a long list, such as countries, states, or categories.
+
+--> <button> : The <button> element is used to create clickable buttons, typically to trigger actions, such as submitting a form, resetting form firlds, or performing other custom actions.
+               It's a more flexible way to create buttons compared to the <input type="button"> element.

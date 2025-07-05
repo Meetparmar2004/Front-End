@@ -1,0 +1,21 @@
+Explain the structure of an HTML table and the purpose of each of the following elements: <table>, <tr>, <th>, <td>, and <thead>.
+
+--> An HTML table is structured with rows and colomns, using specific element to define its structure and content.
+    
+    
+--> <table> : This is the root element that encloses the entire table.
+              It provides the context for all other table-related elements.
+    
+--> <tr> : This element represents a row within the table.
+           Each <tr> element contains one or more <th> or <td> elements, defining the cells within that row.
+    
+--> <th> : This element rapresents a table header cell.
+           It is typically used for column or row headings, providing semantic meaning about the data withinn that cell.    
+    
+--> <td> : This element represents a standard data cell within the table.
+           It holds the actual content of the table, such as numbers, text, or other data.
+
+--> <thead> : This element is used to group the header content of the table.
+              It's typically used to contain the <tr> elements that define the table's column headers.
+              Using <thead> enhances the semantiic structure of the table, especially for accessibility.
+              It helps assistive technologies (like screen readers) understand which cells are headers and which are data.

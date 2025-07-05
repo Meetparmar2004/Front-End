@@ -1,0 +1,5 @@
+Why should tables be used sparingly for layout purposes? What is a better alternative?
+
+--> We should not use tables for page layout or to create a grid-based structure.
+    Instead, use CSS for layout purpose.
+    CSS is for presentation; using tables for layout can make code harder to maintain and more complicated.
