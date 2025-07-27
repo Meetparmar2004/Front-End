@@ -1,0 +1,28 @@
+What is the font-family property in CSS? How do you apply a custom Google Font to a webpage?
+
+--> font-family : -> The font-family property in CSS in used to specify the font of the text content on a webpage.
+                  -> It defines a prioritized list of one or more font names for the browser to use.
+
+        -> Syntax : selector {
+                        font-family: "Font Name", fallback-font, generic-family;
+                    }
+
+        -> Example :    body {
+                            font-family: "Arial", "Helvetica", sans-serif;
+                        }
+                 
+                 -> In this example, the browser will try to use Arial first.
+                 -> If it's not available, it will try Helvetica, and finally use any available sans-serif font.
+
+
+--> How to apply font : 
+
+    -> Steps : 1) Go to Google Fonts, choose a font (e.g., Poppins), and click on "Get embed code".
+               2) Copy the <link> tag provided and paste it inside the <head> section of your HTML.
+                    -> Example :    <head>
+                                        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+                                    </head>
+               3) Use the font in your CSS with the font-family property.
+                    -> Example :    body {
+                                        font-family: 'Poppins', sans-serif;
+                                    }

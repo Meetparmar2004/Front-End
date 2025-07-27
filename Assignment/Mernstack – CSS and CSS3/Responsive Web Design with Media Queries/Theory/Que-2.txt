@@ -1,0 +1,23 @@
+Write a basic media query that adjusts the font size of a webpage for screens smaller than 600px.
+
+--> @media (max-width: 600px) {
+        body {
+            font-size: 14px;
+        }
+    }
+
+--> Explanation : -> @media (max-width: 600px) checks if the screen is 600 pixels wide or smaller.
+                  -> If true, the body text will use a font size of 14px insted of the default size.
+                  -> This improves readability on small screens like smartphones.
+
+--> Usage example in a CSS file:
+
+                body {
+                font-size: 18px; /* Default for larger screens */
+                }
+
+                @media (max-width: 600px) {
+                    body {
+                        font-size: 14px; /* Smaller size for phones */
+                    }
+                }

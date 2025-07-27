@@ -1,0 +1,47 @@
+What is the difference between internal, external, and inline CSS? Discuss the advantages and disadvantages of each approach.
+
+--> Inline CSS : CSS styles are written directly in the HTML tag using the style attribute.
+    
+        -> Example : <p style="color: red; font-size: 16px;">This is inline CSS</p>
+        
+        -> Advantages    : 1) Quick to apply styles to a sigle element.
+                           2) Useful for testing or small changes.
+
+        -> Disadvantages : 1) Not reusable.
+                           2) Makes HTML messy and hard to read.
+                           3) Difficult to maintain for larger website.
+                           4) Has the highest specificity.
+
+
+--> Internal CSS : CSS is written inside a <style> tag within the <head> section of the HTML file.
+
+        -> Example :    <head>
+                            <style>
+                                p {
+                                color: blue;
+                                }
+                            </style>
+                        </head>
+
+        -> Advantages    : 1) Styles are kept in one place (witin the HTML file).
+                           2) Useful for single-page website.
+                           3) Easier to manage than inline CSS.
+
+        -> Disadvantages : 1) Not reusable across multiple pages.
+                           2) Increases page size if style are repeated.
+                           3) Still mixes content (HTML) and style (CSS) in the same file.
+
+
+--> External CSS : CSS is written in a separate .css file and linked using the <link> tag.
+
+        -> Example :    <head>
+                            <link rel="stylesheet" href="style.css">
+                        </head>
+
+        -> Advantages    : 1) Keeps HTML clean and organized.
+                           2) Styles can be reused across multiple web pages.
+                           3) Easier to maintain and update.
+                           4) Better performance due to browser caching.
+
+        -> Disadvantages : 1) Requires an extra HTTP request to load the CSS file.
+                           2) Styles may not apply if the CSS file fails to load.

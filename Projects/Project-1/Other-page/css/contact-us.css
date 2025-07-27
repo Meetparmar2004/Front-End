@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#banner {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: 
+        linear-gradient(90deg, rgba(235, 224, 210, 0.9), rgba(246, 239, 225, 0.9)),
+        url('../../Images/DeWatermark.ai_1753553654234.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+.txt {
+    padding: 10px;
+}
+
+.txt h1 {
+    font-size: 3.5rem;
+    color: #423523;
+    animation: smoothFade 1.4s ease-out both;
+    animation-delay: 0.2s;
+    font-weight: 500;
+}
+
+.part {
+    width: 100%;
+    display: flex;
+}
+
+.form {
+    background-color: #fff7f0;
+    color: #422d1d;
+    padding: 22px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    font-size: 1.1rem;
+    width: 50%;
+    height: 50%;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    animation: smoothFade 1.4s ease-out both;
+    animation-delay: 0.4s;
+}
+
+
+form label input,textarea {
+    display: block;
+    font-size: large;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: solid 1px black;
+    color: #422d1d;
+    background-color: #fff7f0;
+}
+
+textarea {
+    height: 85px;
+    font-size: large !important;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #947758;
+    color: white;
+    margin-top: 5px;
+}
+
+form button:hover {
+    background-color: #796147;
+    transition: background-color 1s ease;
+}
+
+.map {
+    width: 50%;
+    margin: 10px;
+}
+
+.map p {
+    line-height: 25px;
+    animation: smoothFade 1.4s ease-out both;
+    animation-delay: 0.4s;
+}
+
+iframe {
+    width: 300px;
+    height: 250px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    animation: smoothFade 1.4s ease-out both;
+    animation-delay: 0.4s;
+}

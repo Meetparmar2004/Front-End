@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#banner {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: 
+    linear-gradient(90deg, rgba(235, 224, 210, 0.9), rgba(246, 239, 225, 0.9)),
+    url('../../Images/DeWatermark.ai_1753553654234.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 58%;
+    margin: 10% auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.txt h1 {
+    font-size: 3rem;
+    color: #423523;
+    margin-bottom: 40px;
+    text-align: center;
+    animation: smoothFade 1.4s ease-out both;
+    animation-delay: 0.2s;
+    font-weight: 500;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 9px;
+}
+
+h3 {
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.service-card {
+    background-color: #fff7f0;
+    color: #422d1d;
+    padding: 22px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    animation: smoothFade 1.4s ease-out both;
+    animation-delay: 0.4s;
+}
+
+.service-card:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,44 @@
+Describe the grid-template-columns, grid-template-rows, and grid-gap properties. Provide examples of how to use them.
+
+--> 1) grid-template-columns : -> This property defines the number and width of columns in a grid layout.
+
+                --> Syntax : grid-template-columns: value value ...;
+
+                --> Example :   .container {
+                                    display: grid;
+                                    grid-template-columns: 200px 1fr 1fr;
+                                }
+                            --> This creates 3 columns:
+                                    -> Frist column: 200px fixed width
+                                    -> Second and third columns: Flexible width (using 1fr, which means one fraction of remaining space)
+
+
+    2) grid-template-rows : -> This property defines the number and height of row in the grid layout.
+
+                --> Syntax : grid-template-rows: value value ...;
+
+                --> Example :   .container {
+                                    display: grid;
+                                    grid-template-rows: 100px auto 50px;
+                                }
+
+                            --> This creates 3 rows:
+                                    -> First row: 100px;
+                                    -> Second row: Automatically sized based on content
+                                    -> Third row: 50px
+
+    3) grid-gap (or gap) : -> This property sets the space between rows and columns.
+                           -> In morden CSS, grid-gap is replaced by gap, but both work similarly.
+
+                --> Syntax : grid-gap: row-gap column-gap;
+
+                --> Example :   .container {
+                                    display: grid;
+                                    grid-template-columns: 150px 1fr 1fr;
+                                    grid-template-rows: 100px auto;
+                                    gap: 20px;
+                                }
+
+                            --> This sets up a grid with:
+                                    -> 3 columns and 2 rows
+                                    -> A uniform 20px gap between rows and columns

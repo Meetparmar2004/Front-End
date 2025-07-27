@@ -1,0 +1,21 @@
+Explain the concept of CSS specificity. How do conflicts between multiple stylesheet resolved?
+
+--> CSS Specificity : It is a set of rules used by browsers to determine which style should be applied to an element when multiple styles conflict.
+                      It defines the priority of CSS selectors.
+
+--> Specificity Hierarchy : Each selector has a specific weight, and styles with higher weights override those with lower ones.
+                            The specificity si calculated based on the type of selector.
+
+    -> Selector Type                                                     |    Specificity Value
+        1) Inline styles (e.g., style="...")                             |       1000
+        2) ID selectors (e.g., #id)                                      |       100
+        3) Class, attribute, and pseudo-class selector                   |       10
+            (e.g., .class, [type="text"], :hover)                        |       
+        4) Element and pseudo-element selector                           |       1
+            (e.g., div, h1, ::before)                                    |
+        5) Universal selector (*),  combinators, inherited styles        |       0
+
+--> Conflicts Resolved : When multiple CSS rules apply to the same element:
+                         1) Higher specificity wins.
+                         2) If two rules have the same specificity, the last one written in the CSS takes effect.
+                         3) A rule with !important will override any other rule (except another !important with higher specificity).

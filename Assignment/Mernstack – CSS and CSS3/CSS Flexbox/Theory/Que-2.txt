@@ -1,0 +1,20 @@
+Describe the properties justify-content, align-items, and flex-direction used in Flexbox.
+
+--> In CSS Flexbox, the layout of items inside a flex container is controlled using several properties.
+    Among them, justify-content, align-items, flex-direction are key properties used to manage alignment and direction of flex items.
+
+
+    1) flex-direction : -> Defines the main axis along which the flex items are placed.
+                        -> Controls the direction of the layout (horizontal or vertical).
+
+            -> Syntax : flex-direction: row | row-reverse | column | column-reverse;
+
+    2) justify-content : -> Align flex items along the main axis (which is defined by flex-direction).
+                         -> Controls horizontal alignment when flex-direction: row;
+
+            -> Syntax : justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+
+    3) align-items : -> Aligns flex items along the cross axis (perpendiculare to the main axis).
+                     -> Controls vertical alignment when flex-direction: row;
+
+            -> Syntax : align-items: stretch | flex-start | flex-end | center | baseline;

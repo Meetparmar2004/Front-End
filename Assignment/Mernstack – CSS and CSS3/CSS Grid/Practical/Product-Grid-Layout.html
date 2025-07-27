@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .product-title {
+            font-size: 18px;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">Product Grid</h1>
+
+    <div class="grid-container">
+        <div class="product-card">
+            <img src="https://www.apple.com/v/airpods-max/i/images/overview/product-stories/hifi-sound/modal/audio_bc_microphone__c4kgd4pga3cm_large.png" alt="Headphones">
+            <div class="product-title">Wireless Headphones</div>
+            <div class="product-price">₹ 59,900</div>
+        </div>
+        <div class="product-card">
+            <img src="data:image/jpeg;base64,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" alt="Smartphone">
+            <div class="product-title">Smartphone</div>
+            <div class="product-price">₹ 1,49,999</div>
+        </div>
+        <div class="product-card">
+            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/s10-case-unselect-gallery-1-202503_GEO_IN_FMT_WHH?wid=752&hei=720&fmt=p-jpg&qlt=80&.v=T1poMzZuRzBxQ1RzQmhMUHprUE5LZHlVRllKam5abHNZRGludXlMbytKN1NaTlNrS3RJM3dxeGVTRXREd05KZXdNcFdFNWZtdVQ0djE1UTRwRU5lcXlaSE1Qa0haZTFvMWVJTkxjaWwxSnpLcGxxV2Q5dEt1MVE0V0pJUTNTMDZvWkpWVlFLUkNlRlJVNmdjanFGa3R3" alt="Watch">
+            <div class="product-title">Smart Watch</div>
+            <div class="product-price">₹ 44,899</div>
+        </div>
+        <div class="product-card">
+            <img src="https://www.apple.com/newsroom/images/product/mac/standard/Apple-MacBook-Pro-M2-Pro-and-M2-Max-hero-230117.jpg.landing-big_2x.jpg" alt="Laptop">
+            <div class="product-title">Laptop</div>
+            <div class="product-price">₹ 94,990</div>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80" alt="Shoes">
+            <div class="product-title">Running Shoes</div>
+            <div class="product-price">₹ 5,199</div>
+        </div>
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/91qVLIj62WL._UY350_.jpg" alt="Backpack">
+            <div class="product-title">Travel Backpack</div>
+            <div class="product-price">₹ 2,799</div>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Be6_N7O7pZfGGjSXqQ0JBvoMM-qSbHXA6zlP97sH2D9m40Vwy-U1qK5PDlnJiEMnU_U&usqp=CAU" alt="Camera">
+            <div class="product-title">Digital Camera</div>
+            <div class="product-price">₹ 35,999</div>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsmC_qmOQgiQykWffZyESKLuD5mI6qHuZSJg&s" alt="Sunglasses">
+            <div class="product-title">Sunglasses</div>
+            <div class="product-price">₹ 599</div>
+        </div>
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/6161GN02eNL._UF1000,1000_QL80_.jpg" alt="Gaming Mouse">
+            <div class="product-title">Gaming Mouse</div>
+            <div class="product-price">₹ 1,299</div>
+        </div>
+    </div>
+
+</body>
+</html>

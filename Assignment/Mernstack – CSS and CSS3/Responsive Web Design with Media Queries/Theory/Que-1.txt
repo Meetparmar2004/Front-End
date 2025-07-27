@@ -1,0 +1,19 @@
+What are media queries in CSS, and why are they important for responsive design?
+
+--> Media Queries : -> Media queries are a feature of CSS used to apply different styles to a webpage depending on the device's charactristics, 
+                        such as screen size, resolution, orientation, or typr (mobile, tablet, desktop).
+                    -> They help developers create responsive web designs - websites that automatically adjust and look good on all screen sizes and devices.
+
+        --> Syntax :    @media (max-width: 768px) {
+                            body {
+                                background-color: lightblue;
+                            }
+                        }
+
+
+--> Why Media Queries are important : 
+
+    1) Mobile-Friendly websites: Makes the layout suitable for smartphones, tablets, and desktops.
+    2) Flexible layout: Adjusts font size, spacing, images, and other elements based on screen size.
+    3) Improves User Experience: Ensure the site is easy to read and navigate on any device.
+    4) Better SEO: Search engines favor mobile-friendly, responsive designs.

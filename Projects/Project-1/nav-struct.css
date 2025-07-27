@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(90deg,#ebe0d2,#f6efe1);
+    overflow-x: hidden;
+}
+
+.bg {
+    background: 
+    linear-gradient(90deg, rgba(235, 224, 210, 1), rgba(246, 239, 225, 0.9)),
+    url('../Images/DeWatermark.ai_1753553654234.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#partition {
+    display: flex;
+    height: 100vh;
+}
+
+#navbar {
+    width: 20%;
+    height: 100%;
+    background: #f6eee3;
+    text-align: center;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    position: relative;
+}
+
+ul {
+    margin: auto;
+}
+
+#navbar ul li {
+    font-size: 25px;
+    padding: 25px;
+    text-decoration: none;
+    list-style: none;
+    transition: transform 0.3s ease;
+}
+#navbar ul li a:not(.active):hover {
+    transform: scale(1.2);
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #180f09;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+}
+
+#navbar ul li a.active {
+    color: #180f09;
+    transform: scale(1.2);
+    transition: none;
+}
+
+#navbar ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #d3a58f;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+#navbar ul li a.active::after {
+    transform: scaleX(1);
+}
+
+#navbar ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Logo */
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 20px;
+    color: #180f09;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+@keyframes smoothFade {
+    0% {
+        opacity: 0;
+        transform: translate(5px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}

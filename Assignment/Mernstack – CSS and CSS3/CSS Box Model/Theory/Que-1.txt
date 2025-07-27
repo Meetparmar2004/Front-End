@@ -1,0 +1,37 @@
+Explain the CSS box model and its components (content, padding, border, margin). How does each affect the size of an element?
+
+--> CSS Box Model : The CSS Box Modelis a fundamental concept that describes how elements are structured and spaced in a webpage.
+                    Every HTML element is trated as a box that made up of the following 4 layers (from innermost to outermost) :
+
+            
+            1) Content : 
+                -> This is where text, images, or other content appears.
+                -> Its width and height are definding using width and height properties.
+                -> Example : width: 200px; height: 100px;
+
+            2) Padding : 
+                -> Padding is the space between the content and the border.
+                -> It adds space inside the element.
+                -> It Increases the total size of the element.
+                -> Example : padding: 10px; (adds 10px space around the content on all sides).
+
+            2) Border : 
+                -> The border surrounds the padding and content.
+                -> You can change its size, style, and color.
+                -> It also adds to the total size of the element.
+                -> Example : border: 2px solid black;
+
+            2) Margin : 
+                -> Margin is the space outside the element.
+                -> It separates the element from other elements.
+                -> Margin does not affect the element's size, but affects spacing between elements.
+                -> Example : margin: 15px;
+
+
+--> How it affects element size :
+    
+        -> Total Element Size = width + padding (left + right) + border (left + right) + margin (left + right) 
+
+                                        and 
+
+                                        height + padding (top + bottom) + border (top + bottom) + margin (top + bottom)

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLAMORA LUXE</title>
+    <link rel="stylesheet" href="../nav-struct.css">
+    <link rel="stylesheet" href="./css/appointment.css">
+</head>
+<body>
+    <section id="partition">
+        <div id="navbar">
+            <div class="logo">
+                <img src="../Images/logo.png" alt="Glamora Luxe Logo">
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./bridal.html">Bridal</a></li>
+                <li><a href="./courses.html">Courses</a></li>
+                <li><a href="./appointment.html" class="active">Fix an <br>Appointment</a></li>
+                <li><a href="./contact-us.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div id="banner">
+            <div class="container">
+                <div class="txt">
+                    <h1>Fix an Appointment</h1>
+                </div>
+                <div class="form">
+                    <form action="" method="get" autocomplete="off">
+                        <label for="name">Full Name<input type="text" id="name" required></label>
+                        <label for="date">Select Date<input type="date" id="date" required></label>
+                        <label for="time">Select Time
+                            <select name="time" id="time">
+                                <option value=""></option>
+                                <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                                <option value="11:30 AM - 12:30 PM">11:30 AM - 12:30 PM</option>
+                                <option value="01:00 PM - 02:00 PM">01:00 PM - 02:00 PM</option>
+                                <option value="02:30 PM - 03:30 PM">02:30 PM - 03:30 PM</option>
+                                <option value="04:00 PM - 05:00 PM">04:00 PM - 05:00 PM</option>
+                                <option value="05:30 PM - 06:30 PM">05:30 PM - 06:30 PM</option>
+                                <option value="07:00 PM - 08:00 PM">07:00 PM - 08:00 PM</option>
+                            </select>
+                        </label>
+                        <label for="service">Select Service
+                            <select name="service" id="service">
+                                <option value=""></option>
+                                <option value="Facial">Facial</option>
+                                <option value="Hair Styling">Hair Styling</option>
+                                <option value="Makeup">Makeup</option>
+                                <option value="Nail Care">Nail Care</option>
+                                <option value="Hair Color">Hair Color</option>
+                                <option value="Body Massage">Body Massage</option>
+                            </select>
+                        </label>
+                        <button>Confirm</button>
+                    </form>                    
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

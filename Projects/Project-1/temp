@@ -1,0 +1,49 @@
+/* #partition {
+    display: flex;
+    height: 100vh;
+}
+
+#navbar {
+    width: 20%;
+    background: #f6eee3;
+    text-align: center;
+    border-left: solid 2px #000;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  position: relative;
+}
+
+#navbar ul li {
+    font-size: 25px;
+    padding: 25px;
+    text-decoration: none;
+    list-style: none;
+    transition: transform 0.3s ease;
+}
+#navbar ul li:hover {
+    transform: scale(1.2);
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #180f09;
+}
+
+#navbar ul li a.active {
+    border-bottom: 2px solid #d3a58f;
+    padding-bottom: 5px;
+    color: #180f09;
+}
+
+#banner {
+    width: 80%;
+    background: cyan;
+    display: flex;
+    background: linear-gradient(90deg,#ebe0d2,#f6efe1);
+    position: relative;
+}
+
+ul {
+    margin: auto;
+    margin-top: 45%;
+} */
