@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media and Graphics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        canvas {
+            border: 2px solid #444;
+            background: #f0f0f0;
+        }
+
+        svg {
+            border: 2px solid #444;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h2>Audio Tag Example</h2>
+    <audio controls autoplay muted loop>
+        <source src="" type="audio/mpeg">
+    </audio>
+    
+    <h2>Video Tag Example</h2>
+    <video width="320" height="240" controls autoplay muted loop>
+        <source src="https://www.youtube.com/watch?v=iSo9l950QLo&list=RDiSo9l950QLo&start_radio=1" type="video/mp4">
+    </video>
+
+    <h2>Canvas Tag</h2>
+    <canvas width="300" height="150">
+    </canvas>
+
+    <h2>SVG Shapes</h2>
+    <svg width="300" height="150">
+        <rect x="10" y="10" width="100" height="50" fill="orange"/>
+        <circle cx="200" cy="35" r="30" fill="lightblue"/>
+        <line x1="10" y1="100" x2="290" y2="100" stroke="green" stroke-width="3"/>
+    </svg>
+</body>
+</html>

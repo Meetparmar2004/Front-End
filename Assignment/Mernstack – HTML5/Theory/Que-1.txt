@@ -1,0 +1,10 @@
+Difference b/w HTML & HTML5?
+
+--> HTML : -> HTML is the earlier version of the language used to create webpages.
+           -> It had limited features and relied on external plugins for audio, video, and animations.
+           -> It also lacked semantic tags and had basic form controls with limited input types.
+           -> Data storage was done using cookies only.
+
+--> HTML5 : -> HTML5 is the latest version with many improvements.
+            -> It supports built-in audio and video tags, new semantic elements like <header> and <footer>, and modern form inputs like email and date.
+            -> It also includes local and session storage, better performance, and is designed to work well on mobile device and modern browsers.

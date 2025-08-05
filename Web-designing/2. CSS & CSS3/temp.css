@@ -1,0 +1,114 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Layout */
+.main-container {
+  display: flex;
+  height: 100vh;
+  background: url('../images/bg.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+/* Blur effect using overlay */
+.main-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 0;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.logo {
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 15px 0;
+  display: block;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f0c040;
+  padding-left: 10px;
+}
+
+/* Content Area */
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  z-index: 1;
+}
+
+.header {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.card-section {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  flex: 1 1 30%;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card i {
+  font-size: 40px;
+  color: #3c3c3c;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+}

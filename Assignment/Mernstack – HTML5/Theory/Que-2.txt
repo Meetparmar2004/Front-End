@@ -1,0 +1,22 @@
+What are the additional tags used in HTML5?
+
+--> Additional Tags in HTML5 : 1) <header> - Represents the header section of a page or section (like a logo or navigation).
+                               2) <footer> - Defines the footer for a section or page (like copyrights or contact info).
+                               3) <nav> - Used for navigation links.
+                               4) <article> - Represents independent, self-contained content (like blog posts or news articles).
+                               5) <section> - Defines a section of content, typically with a heading.
+                               6) <aside> - Contains side content like ads, tips, or sidebars.
+                               7) <main> - Specifies the main content of a document (only one per page).
+                               8) <figure> - Used to group media elements like images with captions.
+                               9) <figcaption> - Captions for the content inside <figure>.
+                               10) <mark> - Highlights or marks text (like a highlighter).
+                               11) <time> - Represents a date, time, or both.
+                               12) <progress> - Displays the progress of a task (like a loading bar).
+                               13) <meter> - Shows a measurement within a known range (e.g., a score or battery level).
+                               14) <summary> - Used with <details>, provides a visible heading that can be clicked to expand/collapse content.
+                               15) <details> - Creates a collapsible content section.
+                               16) <audio> - Embeds sound content.
+                               17) <video> - Embeds video content.
+                               18) <canvas> - Used to draw graphics via JavaScript.
+                               19) <svg> - Scalable Vector Graphics, for drawing shapes and images.
+                               20) <output> - Displays the result of a calculation or script.
