@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
+    <style>
+      body {
+        background: linear-gradient(135deg, #f9d6ff, #fde1c9);
+        min-height: 100vh;
+        font-family: "Poppins", sans-serif;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center p-4">
+    <div class="max-w-4xl w-full glass rounded-3xl shadow-2xl p-6 sm:p-10">
+      <h1 class="text-3xl font-extrabold text-gray-800 mb-8 text-center">
+        🛍️ Your Cart
+      </h1>
+
+      <!-- CART ITEMS -->
+      <div id="cart-items" class="space-y-6">
+        <!-- Item 1 -->
+        <div
+          id="item1"
+          class="flex flex-col sm:flex-row items-center justify-between glass rounded-2xl p-4 sm:p-6"
+        >
+          <div class="flex items-center gap-4">
+            <img
+              src="./images/Velvet Matte Lipstick.png"
+              alt="Lipstick"
+              class="w-20 h-20 rounded-xl object-cover shadow-md"
+            />
+            <div>
+              <h2 class="text-lg font-semibold text-gray-800">
+                Velvet Matte Lipstick
+              </h2>
+              <p class="text-pink-600 font-bold">
+                ₹<span id="item-price1">599</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center mt-4 sm:mt-0 gap-3">
+            <button
+              class="qty-btn bg-pink-100 px-3 py-1 rounded-full text-xl text-pink-600"
+              onclick="delqty(1)"
+            >
+              −
+            </button>
+            <span class="quantity text-lg font-medium" id="qty1">1</span>
+            <button
+              class="qty-btn bg-pink-100 px-3 py-1 rounded-full text-xl text-pink-600"
+              onclick="addqty(1)"
+            >
+              +
+            </button>
+            <button
+              class="remove ml-4 bg-red-100 text-red-500 px-3 py-1 rounded-full hover:bg-red-500 hover:text-white transition"
+              onclick="removeItem(1)"
+            >
+              Remove
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div
+          id="item2"
+          class="flex flex-col sm:flex-row items-center justify-between glass rounded-2xl p-4 sm:p-6"
+        >
+          <div class="flex items-center gap-4">
+            <img
+              src="./images/Luxury Perfume.png"
+              alt="Perfume"
+              class="w-20 h-20 rounded-xl object-cover shadow-md"
+            />
+            <div>
+              <h2 class="text-lg font-semibold text-gray-800">
+                Luxury Perfume
+              </h2>
+              <p class="text-pink-600 font-bold">
+                ₹<span id="item-price2">1299</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center mt-4 sm:mt-0 gap-3">
+            <button
+              class="qty-btn bg-pink-100 px-3 py-1 rounded-full text-xl text-pink-600"
+              onclick="delqty(2)"
+            >
+              −
+            </button>
+            <span class="quantity text-lg font-medium" id="qty2">1</span>
+            <button
+              class="qty-btn bg-pink-100 px-3 py-1 rounded-full text-xl text-pink-600"
+              onclick="addqty(2)"
+            >
+              +
+            </button>
+            <button
+              class="remove ml-4 bg-red-100 text-red-500 px-3 py-1 rounded-full hover:bg-red-500 hover:text-white transition"
+              onclick="removeItem(2)"
+            >
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOTAL SECTION -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-between">
+        <h3 class="text-2xl font-bold text-gray-800">
+          Total: ₹<span id="cart-total">1898</span>
+        </h3>
+        <button
+          class="mt-4 sm:mt-0 bg-pink-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-pink-700 transition shadow-lg"
+        >
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
