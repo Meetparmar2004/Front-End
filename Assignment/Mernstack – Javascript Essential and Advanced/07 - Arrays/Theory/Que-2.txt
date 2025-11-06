@@ -1,0 +1,26 @@
+Que : Explain the methods push(), pop(), shift(), and unshift() used in arrays.
+
+Ans : 1) push() :   -> Adds one or more elements to the end of an array.
+                    -> Returns the new length of the array.
+            
+            --> Example :   let fruits = ["Apple", "Banana"];
+                            fruits.push("Mango");
+                            console.log(fruits);    // ["Apple", "Banana", "Mango"]
+
+      2) pop() :    -> Removes the last element from an array.
+                    -> Returns the removed element.
+            
+            --> Example :   fruits.pop();
+                            console.log(fruits);    // ["Apple", "Banana"]
+
+      3) shift() :  -> Removes the first element from an array.
+                    -> Returns the removed element.
+            
+            --> Example :   fruits.shift();
+                            console.log(fruits);    // ["Banana"]
+
+      4) unshift() :    -> Adds one or more elements to the beginning of an array.
+                        -> Returns the new length of the array.
+
+            --> Example :   fruits.unshift("Orange");
+                            console.log(fruits);    // ["Orange", "Banana"]

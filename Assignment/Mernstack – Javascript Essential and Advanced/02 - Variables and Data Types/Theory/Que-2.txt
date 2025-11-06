@@ -1,0 +1,30 @@
+Que : Explain the different data types in JavaScript. Provide examples for each.
+
+Ans :   -> JavaScript provides different data types to represent values.
+        -> These are mainly divided into primitive and non-primitive types.
+
+    1) String - represents text data enclosed in quotes.
+        --> Example : let name = "Alice";
+        
+    2) Number - represents numeric values (both integers and floating point).
+        --> Example : let age = 21;
+                      let price = 99.99;
+
+    3) Boolean - represents logical values: true or false.
+        --> Example : let isStudent = true;
+
+    4) Undefined - a variable that is declared but not assigned any value.
+        --> Example : let x;
+                      console.log(x); // Undefined
+
+    5) Null - represent an intentional empty or unknown value.
+        --> Example : let data = null;
+
+    6) Symbol (ES6) - represent a unique and immutable value, often used as object keys.
+        --> Example : let id = Symbol("uniqueId");
+
+    7) String - represents text data enclosed in quotes.
+        --> Example : let name= "Alice";
+
+    8) String - represents text data enclosed in quotes.
+        --> Example : let name= "Alice";

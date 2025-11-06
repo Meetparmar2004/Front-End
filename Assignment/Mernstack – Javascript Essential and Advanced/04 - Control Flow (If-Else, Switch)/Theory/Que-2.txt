@@ -1,0 +1,41 @@
+Que : Describe how switch statements work in JavaScript. 
+      When should you use a switch statement instead of if-else?
+
+Ans : --> Switch statement : -> The switch statement in JavaScript is used to execute one block of code out of many possible options based on the value of a variable or expression.
+                             -> It is an alternative to writing multiple if-else if statements, making the code more organized and easier to read.
+
+            --> Syntax :      switch (expression) {
+                                    case value1:
+                                          // code block if expression == value1
+                                          break;                  
+                                    case value2:
+                                          // code block if expression == value2
+                                          break;
+                                    default:
+                                          // code block if no case matches
+                              }
+
+                        -> case defines different possible values.
+                        -> break is used to stop further execution once a match is found.
+                        -> default runs if no case matches (like else).
+            
+            --> Example :     let day = 3;
+
+                              switch (day) {
+                                    case 1:
+                                          console.log("Monday");
+                                          break;
+                                    case 2:
+                                          console.log("Tuesday");
+                                          break;
+                                    case 3:
+                                          console.log("Wednesday");
+                                          break;
+                                    default:
+                                          console.log("Invalid day");
+                              }
+                  --> Output : Wednesday
+
+      
+      --> When to Use switch Instead of if-else : -> Use if-else when you need to check ranges or complex conditions (e.g., age > 18 && age <30).
+                                                  -> Use switch when you are comparing one value against many fixed options (e.g., days of the week, menu choise, grdes).

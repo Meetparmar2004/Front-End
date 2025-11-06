@@ -1,0 +1,20 @@
+Que : Explain the methods getElementById(), getElementsByClassName(),and querySelector() used to select elements from the DOM.
+
+Ans :   --> Selecting Elements from the DOM : -> JavaScript provides several methods to select and access elements from the HTML document.
+                                              -> Three commonly used methods are getElementById(), getElementsByClassName(), and querySelector().
+
+        1) getElementById() : > Used to select a single element by its unique ID.
+                              > Returns one element (since IDs are unique).
+                
+                --> Syntax : document.getElementById("idName");
+                
+        2) getElementsByClassName() : > Used to select a multiple elements that share the same class name.
+                                      > Returns a collection (HTMLCollection) of elements.
+                                      > You can access individual elements using an index.
+                
+                --> Syntax : document.getElementsByClassName("className");
+
+        3) querySelector() : > Used to select the first element that matches a CSS selector (like ID, class, or tag).
+                             > Very powerful and flexible.
+                
+                --> Syntax : document.querySelector("selector");

@@ -1,0 +1,27 @@
+Que : What is the DOM (Document Object Model) in JavaScript?
+      How does JavaScript interact with the DOM?
+
+Ans :   --> DOM (Document Object Model) :   -> The Document Object Model (DOM) is a programming interface that represents an HTML or XML document as a tree structure.
+                                            -> Each element in the web page (like headings, paragraphs, images, buttons, etc.) is represented as a node or object in this tree.
+                                            -> Through the DOM, JavaScript can access, modify, add, or delete element and their content dynamically - without reloading the web page.
+
+                    --> Example (DOM Structure) :   <html>
+                                                        <body>
+                                                            <h1>Hello</h1>
+                                                        </body>
+                                                    </html>
+
+                    --> DOM as a tree :     Document
+                                                |____  html
+                                                         |____  body
+                                                                  |____  h1
+        
+        --> How JavaScript Interacts with the DOM :     1) Access elements       : 
+                                                                                    > let heading = document.getElementById("title");
+                                                        2) Change content        : 
+                                                                                    > heading.innerHTML = "welcome!";
+                                                        3) Change Style          : 
+                                                                                    > heading.style.color = "blue";
+                                                        4) Add or remove element : 
+                                                                                    > let newPara = document.createElement("p");
+                                                                                        document.body.appendChild(newPara);

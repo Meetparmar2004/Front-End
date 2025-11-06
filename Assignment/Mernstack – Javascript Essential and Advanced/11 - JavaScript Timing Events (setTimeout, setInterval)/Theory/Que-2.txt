@@ -1,0 +1,17 @@
+Que : Provide an example of how to use setTimeout() to delay an action by 2 seconds.
+
+Ans :   <!DOCTYPE html>
+        <html>
+        <head>
+            <title>setTimeout Example</title>
+        </head>
+        <body>
+            <h2>Wait for 2 seconds...</h2>
+
+            <script>
+                setTimeout(function() {
+                alert("This message appears after 2 seconds!");
+                }, 2000);
+            </script>
+        </body>
+        </html>

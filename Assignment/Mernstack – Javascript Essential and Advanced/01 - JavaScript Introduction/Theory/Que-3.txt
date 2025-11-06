@@ -1,0 +1,13 @@
+Que : Discuss the use of <script> tag in HTML. 
+      How can you link an external JavaScript file to an HTML document?
+
+Ans :   Use of <script> Tag in HTML :
+            -> The <script> tag in HTML is used to insert or reference JavaScript code within a webpage.
+            -> It enables developers to make web pages interactive by adding features such as form validation, animations, and dynamic content updates.
+            -> The <script> tag can be placed inside the <head> or <body> section of an HTML document.
+            -> To link an external JavaScript file, the sec attribute of the <script> tag is used.
+            -> The external file must have the .js extension, and linking it keeps the HTML code cleaner and allows reusability of the JavaScript code.
+
+    --> Example : <script src="script.js"></script>
+    
+                -> This statement connects the external file script.js to the HTML document.

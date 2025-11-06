@@ -1,0 +1,16 @@
+Que :  How does the addEventListener() method work in JavaScript?
+       Provide an example.
+
+Ans : addEventListener() Method :   -> The addEventListener() method is used to attach an event handler to an HTML element without overwriting existing events.
+                                    -> It allows you to specify which event to listen for and what function to run when that event occurs.
+
+                    --> Syntax : element.addEventListener(event, function, useCapture);
+
+                    --> Example :   <button id="myButton">Click Me </button>
+                                    <script>
+                                        let btn = document.getElementById("myButton");
+
+                                        btn.addEventListener("click", function() {
+                                            alert("button was clicked!");
+                                        });
+                                    </script>

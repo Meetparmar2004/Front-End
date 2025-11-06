@@ -1,0 +1,42 @@
+Que : What are the different types of operators in JavaScript? 
+      Explain with examples.
+        • Arithmetic operators
+        • Assignment operators
+        • Comparison operators
+        • Logical operators
+
+Ans :   1) Arithmetic Operators : Used to perform basic mathematical calculations.
+            
+            --> Example :   let a = 10, b = 5;
+                            console.log(a + b);
+                            console.log(a - b);
+                            console.log(a * b);
+                            console.log(a / b);
+                            console.log(a % b);
+                            console.log(a ** b);
+
+        2) Assignment Operators : Used to assign values to variables.
+
+            --> Example :   let x = 10;
+                            x += 5;
+                            x -= 3;
+                            x *= 2;
+                            x /= 4;
+
+        3) Comparison Operators : Used to compare two values and return a Boolean (true or false).
+
+            --> Example :   let p = 10, q = 20;
+                            console.log(p == q);
+                            console.log(p === q);
+                            console.log(p != q);
+                            console.log(p > q);
+                            console.log(p >= q);
+                            console.log(p < q);
+                            console.log(p <= q);
+
+        4) Logical Operators : Used to combine multiple conditions.
+
+            --> Example :   let isAdult = true, hasId = false;
+                            console.log(isAdult && hasId);
+                            console.log(isAdult || hasId);
+                            console.log(!isAdult);

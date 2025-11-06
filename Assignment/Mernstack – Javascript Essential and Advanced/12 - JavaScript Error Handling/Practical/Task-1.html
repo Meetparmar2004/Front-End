@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1</title>
+</head>
+<body>
+    
+    <h2>Division by Zero</h2>
+
+    <script>
+        try {
+            let num = 10;
+            let divisor = 0;
+
+            if (divisor === 0) {
+                // Throw a custom error
+                throw new Error("Cannot divide by zero!");
+            }
+
+            let res = num / divisor;
+            console.log("Result: ", res);
+
+        } catch (error) {
+            console.log("Error: ",error.message);
+            alert("Error: " + error.message);
+        }
+    </script>
+</body>
+</html>

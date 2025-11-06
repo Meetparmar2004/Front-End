@@ -1,0 +1,17 @@
+Que : What is the difference between a while loop and a do-while loop?
+
+Ans : 1) Condition Checking : -> In a while loop, the condition is checked before the loop body runs.
+                              -> In a do-while loop, the condition is checked after the loop body runs.
+    
+      2) Execution Guarantee : -> A while loop may not run at all if the condition is false initially.
+                               -> A do-while loop always runs at least once, even if the condition is false.
+
+      3) Syntax Example : -> while loop :   let i = 5;
+                                            while (i < 5) {
+                                                console.log("Inside while loop");   // will not run
+                                            }
+                            
+                          -> do-while loop :    let i = 5;
+                                                do {
+                                                    console.log("Inside do-while loop");   // runs once
+                                                } while (i < 5);

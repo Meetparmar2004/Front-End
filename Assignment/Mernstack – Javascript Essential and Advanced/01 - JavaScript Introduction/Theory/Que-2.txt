@@ -1,0 +1,29 @@
+Que :  How is JavaScript different from other programming languages like Python or Java?
+
+Ans :   1) Execution Environment :
+            -> JavaScript is primarily designed to run inside web browsers, making it the language of the web for client-side interactivity.
+            -> Python and Java are general-purpose languages that run on dedicated interpreters (Python) or virtual machines (Java) and are not tied to browsers by default.
+
+        2) Typing System :
+            -> JavaScript is dynamically typed (variable types are determined at runtime).
+            -> Python is also dynamically typed, but with stricter readability and error messages.
+            -> Java is statically typed (variable types must be declares before use).
+
+        3) Compilation vs. Interpretation :
+            -> JavaScript is interpreted (though modern engines use Just-In-Time compilation for speed).
+            -> Python is interpreted.
+            -> Java is compiled to bytecode, which runs on the Java Virtual Machine (JVM).
+
+        4) Use Cases :
+            -> JavaScript is mostly used for web development (front-end,back-end with Node.js).
+            -> Python is widely used in data science, AI, Machine learning, automation, and web development (back-end).
+            -> Java is commonly used in enterprise applications, mobile apps (Androind), and large-scal systems.
+
+        5) Syntax and Readability :
+            -> JavaScript syntax is similar to C, but less strict.
+            -> Python emphasizes readability and simplicity (indentation is part of the syntax).
+            -> Java has varbose syntax with strict rules and structure.
+
+        6) Object Orientation :
+            -> JavaScript is prototype-based (object are created from other objects).
+            -> Python and Java are class-based object-oriented languages.

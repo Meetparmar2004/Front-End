@@ -1,0 +1,22 @@
+Que : Explain how to access and update object properties using dot notation and bracket notation.
+
+Ans :   1) Dot Notation : -> Access : Use the object name followed by a . and the property name.
+                          -> Update : Assign a new value using =.
+
+            --> Example :   let person = { name: "Alice", age: 25};
+                            
+                            console.log(person.name);   // Access
+
+                            person.age = 26;
+                            console.log(person.age);    // Update
+
+        2) Bracket Notation : -> Access : Use the object name followed by square brackets [] with the property name as a string.
+                              -> Update : Assign a new value using = inside brackets.
+                              -> Useful when property names have spaces, special characters, or are dynamic.
+
+            --> Example :   let person = { "full name": "Alice Johnson", age: 25};
+                            
+                            console.log(person["full name"]);   // Access
+
+                            person.age = 27;
+                            console.log(person["age"]);    // Update

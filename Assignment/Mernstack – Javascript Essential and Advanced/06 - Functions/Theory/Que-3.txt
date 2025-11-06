@@ -1,0 +1,19 @@
+Que : Discuss the concept of parameters and return values in functions.
+
+Ans :   1) Parameters : -> Parameters are placeholders or variables defined inside the function parentheses () that allow you to pass information (data) into a function.
+                        -> When a function is called, the actual values given to these parameters are called arguments.
+                        -> Parameters make functions more flexible and reusable.
+
+            --> Example :   function add(a, b) {
+                                console.log(a + b);     // a and b are parameter
+                            }
+                            add(5,10);  // 5 and 10 are arguments
+
+        2) Return Value : -> The return statement is used to send a value back from the function to the part of the program where it was called.
+                          -> Once a function executes the return statement, it stops running and give the result.
+
+            --> Example :   function multiply(x, y) {
+                                return x * y;     // returns the result
+                            }
+                            let result = multiply(4, 5);  
+                            console.log(result);    // output: 20

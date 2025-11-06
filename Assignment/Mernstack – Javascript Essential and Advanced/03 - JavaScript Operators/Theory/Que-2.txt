@@ -1,0 +1,13 @@
+Que : What is the difference between == and === in JavaScript?
+
+Ans : 
+        == (Equality Operator) : -> Compares only values, not data types.
+                                 -> If the types are different, JavaScript automatically converts them before comparison (type coercion).
+                        
+                        --> Example : 5 == "5   // true (because "5" is converted to number)
+
+        === (Strict Equality Operator) : -> Compares both value and data type.
+                                         -> Returns true only if both are exactly the same.
+
+                        --> Example : 5 === "5" // false (number is not equal to string)
+                                      5 === 5   // true

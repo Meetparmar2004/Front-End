@@ -1,0 +1,17 @@
+Que : What are functions in JavaScript? 
+      Explain the syntax for declaring and calling a function.
+
+Ans : --> Function : -> Functions in JavaScriptare are block of code designed to perform specific tasks.
+                     -> They help in reusing code, making programs organized, readable, and efficient.
+                     -> Instead of writing the same code multiple times, we can define it once inside a function and call it whenever needed.
+
+        --> Syntax : function functionName (parameter1, parameter2) {
+                        // code to be executed
+                     }
+
+        --> Calling a Function : Once defined, the function is executed by calling its name followed by parentheses ().
+
+        --> Example :   function greet() {
+                            console.log("Hello, welcome to JavaScript");
+                        }
+                        greet(); //Function call
