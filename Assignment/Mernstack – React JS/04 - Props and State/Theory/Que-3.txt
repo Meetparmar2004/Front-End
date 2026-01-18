@@ -1,0 +1,14 @@
+Que - Why is this.setState() used in class components, and how does it work?
+
+Ans - --> Why this.setState() is used :
+                -> Directly changing state using this.state does not update the UI.
+                -> this.setState() ensures that React properly tracks state changes.
+                -> It triggers re-rendering of the component when data changes.
+                -> It keeps the UI in sync with the component's data.
+
+     --> How this.setState() works :
+                -> When this.setState() is called, React does not immediately update the state.
+                -> React places the update in a queue and processes it efficiently.
+                -> The new state is merged with the existing state.
+                -> React calls the render() method again.
+                -> Only the updated parts of the UI are changed.

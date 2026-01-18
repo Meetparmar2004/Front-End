@@ -1,0 +1,27 @@
+Que - Explain the core principles of React such as the virtual DOM and component-based architecture.
+
+Ans - -> React.js designed using a few important core principles that make it fast, efficient, and easy to build large applications.
+      -> Two of the main principles are the Virtual DOM and Component-Based Aarchitecture.
+
+      
+        1) Virtual DOM (Document Object Model) :    -> The Virtual DOM is a key concept in React that improves the perfomance of web applications.
+                                                    -> The Virtual DOM is a lightweight copy of the real browser DOM.
+                                                    -> Whenever something changes in the UI, React updates the Virtual DOM first instead of directly updating the real DOM.
+                                                    -> React creates virtual representation of the UI.
+                                                    -> When data changes, React creates a new Virtual DOM.
+                                                    -> React components the new Virtual DOM with the old one using a process called diffing.
+                                                    -> It finds the exact elements that have changed.
+                                                    -> Only those specific elements are updating in the real DOM.
+                                                    -> Direct DOM manipulation is slow.
+                                                    -> Virtual DOM updates are faster, efficient and improves app perfomance.
+                                                    -> It makes React suitable for complex and large-scale applications.
+        
+        2) Component-Based Aarchitecture :  -> React follows a component-based architecture, which means an application is built using small, reusable pieces called components.
+                                            -> A component is a self-contained module that : has its own logic, own UI, can be reused anywhere in the application.
+                                            -> There are two types of components : 1. Functional Component, 2. CLass Component.
+                                            -> They make code modular, clean, and easy to maintain.
+                                            -> Large UIs can be broken into smaller parts like Header, Footer, Sidebar, Card, etc.
+                                            -> Components can be reused multiple times, reducing code duplications.
+                                            -> Each component receives input called props.
+                                            -> Components may also have their own internal data called state.
+                                            -> When state or props change, React re-renders only that component.

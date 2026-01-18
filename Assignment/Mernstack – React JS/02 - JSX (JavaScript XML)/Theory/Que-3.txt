@@ -1,0 +1,19 @@
+Que - Discuss the importance of using curly braces {} in JSX expressions.
+
+Ans - Importance of Curly Braces {} in JSX:
+
+            1). Display Dynamic Data :  -> Curly braces allow variables and values to be displayed dynamically in JSX.
+                                        -> This helps in rendering changing data such as user names, counts, and messages.
+
+            2). Execute JavaScript Expression :  -> Inside {}, developers can write JavaScript expression like: > Arithmethic operation, Function calls, Ternary expression.
+                                                 -> This makes the UI responsive to logic and data changes.
+
+            3). Use Props and State :   -> Curly braces are essential for accessing props and state values in JSX.
+                                        -> Without {}, React cannot interpret JavaScript values inside JSX.
+
+            4). Conditional Rendering : -> Curly braces allow conditional rendering using expression such as : > Ternary operator, Logical AND(&&).
+                                        -> This helps show or hide UI element based on conditions.
+
+            5). Inline Styling : -> Curly braces are used to apply inline styles in JSX using JavaScript objects, enabling dynamic styling of components.
+
+            6). Event Handling : -> JavaScript Functions are passed to event handlers using curly braces, making interaction possible.

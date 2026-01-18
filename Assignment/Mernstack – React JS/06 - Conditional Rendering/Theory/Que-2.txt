@@ -1,0 +1,11 @@
+Que -  Explain how if-else, ternary operators, and &&(logical AND) are used in JSX for conditional rendering.
+
+Ans -   1) if-else statement :  > if-else is used when different blocks of UI need to be rendered based on a condition.
+                                > Usually, the condition is written before the return statement, and different JSX is returned depending on whether the condition is true or false.
+
+        2) ternary operator  :  > The ternary operator is used when there are two possible outcomes.
+                                > It is written directly inside JSX and is useful for simple conditions where one element is shown if the condition is true and another if it is false.
+        
+        3) logical AND (&&)  :  > The && operator is used when an element should be rendered only if a condition is true.
+                                > If the condition is false, nothing is rendered on the screen.
+                                > This methods is commonly used for optional UI elements.

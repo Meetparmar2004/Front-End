@@ -1,0 +1,30 @@
+Que - What is React.js? 
+      How is it different from other JavaScript frameworks and libraries?
+
+Ans - -> React.js is an open-source JavaScript library developed by Facebook for building fast, interactive, and reusable user interfaces, especially for single-page applications (SPA).
+      -> It follows a component-based architecture, where the UI is divided into small, independent, reusable components.
+      -> React uses a special feature called the Virtual DOM to update only the required parts of the webpage, making applications faster and more efficient.
+
+
+      --> Differences between React.js and other JavaScript frameworks/libraries:
+
+            1) Library vs Framework : -> React is a library, not a full framework.
+                                      -> Unlike Angular or vue, React only handles the UI, and developers can choose their own tools for routing, state management, etc.
+
+            2) Virtual DOM :  -> React uses Virtual DOM, which compares changes and updates only the necessary elements.
+                              -> Other frameworks like Angular use the Real DOM, which is slower for large applications.
+
+            3) Component-Based Aarchitecture :  -> React applications are built completely with reusable components.
+                                                -> Although other frameworks have components, React's component system is more flexible and widely adopted.
+
+            4) JSX (JavaScript XML) : -> React uses JSX, which allows HTML to be written inside JavaScript.
+                                      -> Most other frameworks use templating languages or separate HTML files.
+            
+            5) One-way Data Binding : -> React follows one-way (unidirectional) data flow, which makes data management simpler and more predictable.
+                                      -> Frameworks like Angular use two-way data binding, which can become complex in large apps.
+
+            6) Learning Curve : -> React has a simpler learning curve compared to full frameworks like Angular.
+                                -> Developers can start with basic JavaScript + JSX and gradually learn advances concepts.
+            
+            7) Ecosystem Flexibility : -> React gives developers full freedom to choose additional libraries (Redux React Router, etc.).
+                                       -> Frameworks like Angular provide everything built-in, which is less flexible.

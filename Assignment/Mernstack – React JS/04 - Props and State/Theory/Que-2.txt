@@ -1,0 +1,13 @@
+Que - Explain the concept of state in React and how it is used to manage component data.
+
+Ans - --> Concept of State in React :
+            -> State is local to a component, meaning it cannot be directly accessed by other components.
+            -> When the state of a component changes, React automatically re-render the component to reflect the updated data.
+            -> State allows components to respond to user interactions, such as clicks, from input, or API responses.
+
+     --> How State is Used to Manage Component Data : 
+            1) Storing Data : -> State holds values such as user input, counters, toggle status, or fetched data.
+            2) Updating Data : -> this.setState() in class components
+                               -> State updater functions (Hooks) in functional components
+            3) Re-rendering UI : -> When state changes, React updates only the affected parts of the UI, keeping the application fast and efficient.
+            4) Controlling Component Behavior : -> State determines what content is displayed and how components behave based on current values.

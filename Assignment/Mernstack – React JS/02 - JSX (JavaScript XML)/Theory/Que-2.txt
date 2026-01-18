@@ -1,0 +1,27 @@
+Que -  How is JSX different from regular JavaScript?
+       Can you write JavaScript inside JSX?
+
+Ans - --> Differences between JSX and Regular JavaScript : 
+
+                1). Syntax : -> JSX: allows writing HTML-like tags inside JavaScript.
+                             -> Regular JavaScript: does not allow HTML-like syntax directly.
+
+                2). Readability : -> JSX: makes UI code more readable and easier to understand.
+                                  -> Regular JavaScript: UI creation is more complex and less readable.
+                
+                3). Use of Expression : -> JSX: JavaScript expressions can be written inside {}.
+                                        -> Regular JavaScript: uses standard syntax without HTML-style embedding.
+                
+                4). Attribute Naming : -> JSX: uses className instead of class, and htmlFor instead of for.
+                                       -> Regular JavaScript: uses standard HTML attribute names.
+                
+                5). Compilation : -> JSX:must be compiled using Babel before execution.
+                                  -> Regular JavaScript: runs directly in the browser.
+
+     --> Can you write JavaScript inside JSX?
+
+            -> Yes, JavaScript expressions can be written inside JSX using curly braces {}.
+            -> Examples of what you can use inside JSX : -> Variables
+                                                         -> Function calls
+                                                         -> Conditional expression
+                                                         -> Arithmetic operations

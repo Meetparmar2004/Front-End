@@ -1,0 +1,17 @@
+Que - What are props in React.js? 
+      How are props different from state?
+
+Ans - 1) Props :    -> In React.js, props (properties) are used to pass data from a parent component to a child component.
+                    -> Props make components reusable by allowing different data to be sent to the same component.
+                    -> Props are read-only, meaning a component cannot modify the props it receives.
+
+    --> difference between Props and State
+ _________________________________________________________________________________________________________________
+|     Feature            |                   Props                   |                   State                    |
+|                        |                                           |                                            |
+| -> Definition          | - Data passed from parent to child        | - Internal data of a component             |
+| -> Mutability          | - Read-Only (cannot be changed)           | - Can be changed                           |
+| -> Scope               | - Controlled by parent component          | - Controlled by the component itself       |
+| -> Usage               | - Used to pass data and configuration     | - Used to manage dynamic data              |
+| -> Re-render           | - Changes cause child to re-render        | - Changes cause component to re-render     |
+|________________________|___________________________________________|____________________________________________|

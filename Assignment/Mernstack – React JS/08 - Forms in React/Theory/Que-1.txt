@@ -1,0 +1,12 @@
+Que - How do you handle forms in React?
+      Explain the concept of controlled components.
+
+Ans -   --> Handling forms in React :   > Form inputs are connected to state variables
+                                        > Events handlers like onChange are used to update the state
+                                        > The form data is accessed through state instead of the DOM
+                                        > onSubmit is used to handle form submission
+
+        --> Controlled components : > A controlled components is a form element whose value is fully controlled by React state.
+                                    > The value of the input comes from state
+                                    > Any change in the input updates the state
+                                    > React becomes the single source of truth for form data

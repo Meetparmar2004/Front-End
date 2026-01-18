@@ -1,0 +1,46 @@
+Que - What are some common event handlers in React.js?
+      Provide examples of onClick, onChange, and onSubmit.
+
+Ans - --> Event handlers :  > In React.js, event handlers are used to handel user interaction such as clicking buttons, typing in input fields, and submitting forms.
+                            > React event handlers are written in camelCase and are passed as functions inside JSX.
+                            
+      --> Common Event Handlers :   > onClick
+                                    > onChange
+                                    > onSubmit
+                                    > onMouseOver
+                                    > onKeyDown
+
+    1) onClick Event : > The onClick event is triggered when a user clicks on an elements such as a button.
+
+        --> Example :   function ClickExample() {
+                        const handleClick = () => {
+                            alert("Button clicked");
+                        };
+
+                        return <button onClick={handleClick}>Click Me</button>;
+                        }
+
+    2) onChange Event : > The onChange event is used to handel changes in input fields like textboxes.
+
+        --> Example :   function ChangeExample() {
+                        const handleChange = (event) => {
+                            console.log(event.target.value);
+                        };
+
+                        return <input type="text" onChange={handleChange} />;
+                        }
+
+    3) onSubmit Event : > The onSubmit event is used when a form is submitted.
+
+        --> Example :   function SubmitExample() {
+                        const handleSubmit = (event) => {
+                            event.preventDefault();
+                            alert("Form submitted");
+                        };
+
+                        return (
+                            <form onSubmit={handleSubmit}>
+                            <button type="submit">Submit</button>
+                            </form>
+                        );
+                        }

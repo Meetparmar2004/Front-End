@@ -1,0 +1,13 @@
+Que - How do you render a list of items in React?
+      Why is it important to use keys when rendering lists?
+
+Ans -   -> In React, a list of items is rendered by looping over an array and converting each item into a React element.
+        -> This is usually done using JavaScript array methods like map().
+        -> Each item in the list is displayed as a separate element in the user interface.
+
+        --> Importance of using keys : 
+                -> Keys are special attributes used by React to identify each list item uniquely.
+                -> Using keys is important because :    > Keys help React identify which items have changed, been added, or removed
+                                                        > They improve performance during re-rendering
+                                                        > They prevent unwanted UI updates
+                                                        > They help React update only the required elements

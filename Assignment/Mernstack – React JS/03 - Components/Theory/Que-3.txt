@@ -1,0 +1,9 @@
+Que -  What is the role of render()in class components?
+
+Ans - --> Role of render() method:
+
+                1) Return JSX : -> The render() method returns JSX that represents the user interface of the component.
+                2) Controls UI Output : -> It decides how the component should look based on props and state.
+                3) Re-renders on Changes : -> Whenever the component's state or props change, the render() method is automatically called again to update the UI.
+                4) Does Not Modify State : -> The render() method should be pure; it should not change state or perform side effects.
+                5) Mandatory in Class Componetns : -> Every class component must have a render() method; without it, the component will not display anything.
