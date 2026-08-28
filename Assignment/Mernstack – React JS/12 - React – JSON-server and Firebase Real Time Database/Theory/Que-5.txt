@@ -1,0 +1,17 @@
+Que - Discuss the importance of handling errors and loading states when working with APIs in React.
+
+Ans -   --> Importance of Loading States :  -> Loading states show the user that data is being fetched from the server.
+                                            -> Why loading states are important :   > Inform users that data is loading
+                                                                                    > Prevent blank or broken UI
+                                                                                    > Improve user experience 
+                                                                                    > Avoid confusion during slow network responses
+
+                                            -> Example : > Showing "Loading..." while API data is being fetched
+
+        --> Importance of Error Handling :  -> Errors can occur due to network issues, server problems, or incorrect API requests.
+                                            -> Why Error Handling is important :   > Displays meaningful error messages
+                                                                                   > Prevent app crashes
+                                                                                   > Helps in debugging issues
+                                                                                   > Improves application reliability
+
+                                            -> Example : > Showing "Failed to load data" if the API request fails

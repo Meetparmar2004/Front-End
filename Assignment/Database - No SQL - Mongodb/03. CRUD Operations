@@ -1,0 +1,89 @@
+Tasks
+
+1. Create a MongoDB collection named 'restaurants' and use insertOne to add a new restaurant document with fields: name, cuisine, location, and rating.
+
+-> db.restaurants.insertOne({
+    name: "Burger Hub",
+    cuisine: "Fast Food",
+    location: "Rajkot",
+    rating: 4.5
+})
+
+
+2. Use insertMany to add 3 new documents to the 'movies' collection, each representing a different movie with fields: title, genre, releaseYear, and imdbRating.
+
+-> db.movies.insertMany([
+    {
+        title: "Demon Slayer: Infinity Castle",
+        genre: "Anime",
+        releaseYear: 2025,
+        imdbRating: 8.5
+    },
+    {
+        title: "Avatar: Fire and Ash",
+        genre: "Science Fiction",
+        releaseYear: 2025,
+        imdbRating: 7.8
+    },
+    {
+        title: "Wednesday",
+        genre: "Comedy Horror",
+        releaseYear: 2025,
+        imdbRating: 8.0
+    }
+])
+
+
+3. Write a query using find to display all products from a 'flipkart_products' collection where the price is less than 1000.
+
+-> db.flipkart_products.insertMany([
+    {
+        name: "Wireless Mouse",
+        brand: "Logitech",
+        price: 799,
+        category: "Electronics"
+    },
+    {
+        name: "Bluetooth Speaker",
+        brand: "Boat",
+        price: 1499,
+        category: "Electronics"
+    }
+])
+
+-> db.flipkart_products.find({
+    price: { $lt: 1000 }
+})
+
+
+4. Update the rating of a restaurant named 'Burger Hub' in the 'restaurants' collection to 4.7 using updateOne.
+
+-> db.restaurants.updateOne(
+    { name: "Burger Hub" },
+    { $set: { rating: 4.7 } }
+)
+
+
+5. Delete all orders from an 'orders' collection where the status is 'cancelled' using deleteMany.
+
+-> db.orders.insertMany([
+    {
+        orderId: 101,
+        product: "Wireless Mouse",
+        status: "cancelled"
+    },
+    {
+        orderId: 102,
+        product: "Bluetooth Speaker",
+        status: "delivered"
+    },
+    {
+        orderId: 103,
+        product: "Keyboard",
+        status: "cancelled"
+    }
+])
+
+-> db.orders.deleteMany({
+    status: "cancelled"
+})

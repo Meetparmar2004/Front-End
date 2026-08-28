@@ -1,0 +1,23 @@
+Que - Explain how createContext() and useContext() are used in React for sharing state.
+
+Ans -   -> In React, createContext() and useContext() are used togather to share state or data between components without passing props manually.
+        -> This is helpful when many components needs access to the same data.
+
+        -> Role of createContext() : > createContext() is used to create a context object
+                                     > It acts like a container for shared data
+                                     > It provides two components : Provider and Consumer
+                        -> Purpose : > Define what data will be shared globally
+
+        -> Role of useContext() : > useContext() is a React Hook
+                                  > It allows any functional component to consume context data
+                                  > Eliminates the need for props drilling
+                     -> Purpose : > Access shared state easily inside components
+
+        --> How They Work Together : > createContext() creates the context
+                                     > Provide makes state available to components
+                                     > useContext() reads and uses the shared state
+
+        --> Advantages of Using Context API : > Cleaner code
+                                              > Easy state sharing
+                                              > Reduces prop drilling
+                                              > Built-in React solution

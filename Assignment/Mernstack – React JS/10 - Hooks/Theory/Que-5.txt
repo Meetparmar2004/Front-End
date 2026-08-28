@@ -1,0 +1,9 @@
+Que - What’s the Difference between the useCallback & useMemo Hooks?
+
+Ans -   --> useCallback() : -> useCallback is used to memoize functions.
+                            -> It returns the same function reference unless its dependencies change.
+                            -> This helps prevent unnecessary re-renders when functions are passed to child components.
+
+        --> useMemo() : -> useMemo is used to memoize values.
+                        -> It stores the result of a calculation and recomputes it only when its dependencies change.
+                        -> This helps avoid repeating expensive calculation.

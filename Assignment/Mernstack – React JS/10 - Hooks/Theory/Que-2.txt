@@ -1,0 +1,13 @@
+Que - What problems did hooks solve in React development?
+      Why are hooks considered an important addition to React?
+
+Ans -   1) Problems solved by Hooks :   > Class components were complex and hard to understand
+                                        > Reusing stateful logic between components was difficult
+                                        > Large components became messy due to repeated lifecycle logic
+                                        > Uderstanding this keyword caused confusion
+
+        2) Why Hooks are an important addition :    > Hooks allow state and lifecycle features in functional components
+                                                    > They make code simpler and cleaner
+                                                    > Logic can be reused easily using custom hooks
+                                                    > No need to use class components in most cases
+                                                    > Improve code readability and maintenance

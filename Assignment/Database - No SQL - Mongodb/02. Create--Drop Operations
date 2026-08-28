@@ -1,0 +1,32 @@
+Tasks
+
+1. Open MongoDB shell and create a new database named insta_clone_db, then switch to it using the appropriate commands.
+
+-> use insta_clone_db
+
+
+2. Inside insta_clone_db, create a collection called posts that will store Instagram-style photo posts.
+
+-> db.createCollection("posts")
+
+
+3. Create another collection named stories in insta_clone_db, and insert a sample story document with fields: username, image_url, and timestamp.
+
+->  db.createCollection("stories")
+->  db.stories.insertOne({
+        username: "meet_parmar",
+        image_url: "https://example.com/story.jpg",
+        timestamp: new Date()
+    })
+
+
+4. Drop the stories collection from insta_clone_db and verify that it no longer exists.
+
+-> db.stories.drop()
+-> show collections
+
+
+5. Drop the entire insta_clone_db database from MongoDB, then use the show dbs command to confirm it has been deleted.
+
+-> db.dropDatabase()
+-> show dbs

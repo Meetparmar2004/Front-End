@@ -1,0 +1,14 @@
+Que - Explain the difference between BrowserRouter, Route, Link, and Switch components in React Router.
+
+Ans -   1) BrowserRouter :  > It is the main wrapper component for routing
+                            > Uses the browser's HTML5 history API
+                            > All routing components must be placed inside it
+
+        2) Route :  > Used to define a path and its corresponding component
+                    > Renders a component when the URL matches the given path
+
+        3) Link :   > Used for navigation between pages
+                    > Works like an <a> tag but does not reload the page
+
+        4) Switch : > Renders only the first matching Route
+                    > Prevents multiple routes from rendering at the same time

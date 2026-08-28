@@ -1,0 +1,17 @@
+Que -  What is useReducer ? 
+       How we use in react app?
+
+Ans -   --> useReducer() : -> Is a React Hooks used to manage complex state logic in functional components.
+                           -> It is an alternative to useState and is mainly used when state updates depend on previous state or involve multiple actions.
+                           -> Manages state using a reducer function
+                           -> Uses actions to decribe how state should change
+                           -> Makes state logic more organized and predictable
+
+        --> How useReducer is used in a React app :   > A reducer function defines how state updates happen
+                                                      > useReducer returns the current state and a dispatch function
+                                                      > The dispatch function is used to send actions
+                                                      > Based on the action, the reducer updates the state
+
+        --> When to use useReducer :    -> When state logic is complex
+                                        -> When there are multiple ways to update state
+                                        -> When managing related pieces of state together

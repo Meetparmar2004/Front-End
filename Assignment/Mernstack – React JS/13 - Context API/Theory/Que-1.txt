@@ -1,0 +1,25 @@
+Que - What is the Context API in React?
+      How is it used to manage global state across multiple components?
+
+Ans -   --> What is Context API? :  > Built-in feature of React
+                                    > Used to manage global state
+                                    > Shares data like user info, theme, or language
+                                    > Makes code cleaner and easier to maintain
+
+        --> Why use Context API? :  > Avoid passing props through many components
+                                    > Improves readability of code
+                                    > Centralizes shared data
+                                    > Useful for mediu,-size application
+
+        --> How Context API works : 1) Create Context : > createContext() is used to create a context
+                                    2) Provide Data : > Provider component wraps the app and supplies data
+                                    3) Consume Data : > Components access data using useContext() or Consumer
+
+        -> Example Use Cases :  > User authentication data
+                                > Theme (dark/light mode)
+                                > Language selection
+                                > Global setting
+
+        --> Advantages of Context API : > Reduces prop drilling
+                                        > Easy to use and integrate
+                                        > Built into React (no extra library)

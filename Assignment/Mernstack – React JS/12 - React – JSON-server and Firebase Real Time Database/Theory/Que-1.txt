@@ -1,0 +1,24 @@
+Que - What do you mean by RESTful web services?
+
+Ans -   --> RESTful Web services :  -> Web services that follow the principles of REST (Representational State Transfer).
+                                    -> They allow different applications to communicate with each other over the internet using standard HTTP methods.
+
+        --> What is REST ? :  -> REST is an architectural style used for designing networked applications.
+                              -> It uses simple HTTP protocols to perform operations on data.
+
+        --> Key Features of RESTful Web Services :  1) Client-Server Architecture : > Client and Server are independent
+                                                                                    > Improves scalability and flexibility
+
+                                                    2) Stateless :  > Each request contains all required information
+                                                                    > Server does not store client session data
+
+                                                    3) Uses HTTP Methods :  > GET - retrive data
+                                                                            > POST - create new data
+                                                                            > PUT - update existing data
+                                                                            > DELETE - remove data
+
+                                                    4) Resource-Based :  > Data is treated as resources
+                                                                         > Resources are accessed using URLs
+
+                                                    5) Data Format :  > Commonly uses JSON
+                                                                      > Can also use XML or plain text

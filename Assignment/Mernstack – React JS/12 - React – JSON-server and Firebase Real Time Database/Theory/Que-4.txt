@@ -1,0 +1,36 @@
+Que - What is Firebase?
+      What features does Firebase offer?
+
+Ans - Firebase :    > Firebase is a BAckend-as-a-Service (BaaS) platform developed by Google.
+                    > It helps devlopers build web and mobile application without creating their own backend.
+                    > Firebase provides ready-to-use backend services such as database, authentication, and hosting.
+                    > Cloud-based platform by Google
+                    > Used for web and mobile app development
+                    > Reduces backend development effort
+                    > Provides real-time data handling
+
+    --> Features Offered by Firebase :  1) Firebase Authentication : > User login and signup
+                                                                     > Supports email/password, Google, Facebook, etc.
+
+                                        2) Realtime Database : > Stores data in JSON format
+                                                               > Updates data in real time across all client
+
+                                        3) Cloud Firestore : > Modern NoSQL database 
+                                                             > Scalable and flexible data storage
+
+                                        4) Firebase Hosting : > Fast and secure web hosting
+                                                              > Supports HTTPS by default
+
+                                        5) Cloud Storage : > Store images, videos, and files
+                                                           > Secure and scalable storage
+
+                                        6) Cloud Function : > Run backend code without managing servers
+                                                            > Triggered by Firebase events
+
+                                        7) Analytics : > Track user behavior
+                                                       > Helps improve app performance
+
+    --> Advantages of Firebase : > No server management required
+                                 > Easy to integrate with React
+                                 > Real-time data synchronization
+                                 > Secure and scalable

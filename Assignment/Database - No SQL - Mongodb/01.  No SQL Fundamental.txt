@@ -1,0 +1,68 @@
+Tasks
+
+1. Install MongoDB Community Edition on your system and use the mongo shell to create a new database named 'foodieApp'.
+
+-> use foodieApp
+
+
+2. Inside the 'foodieApp' database, create a collection named 'restaurants' and insert a document for a Zomato-style restaurant with fields: name, cuisine, rating, and location.
+
+-> db.restaurants.insertOne({
+    name: "The Food House",
+    cuisine: "Indian",
+    rating: 4.5,
+    location: {
+        city: "Rajkot",
+        area: "Kalawad Road"
+    }
+})
+
+
+3. Insert three more restaurant documents into the 'restaurants' collection, making sure to use at least one field with an array data type (for example, a 'menu' array listing popular dishes).
+
+-> db.restaurants.insertMany([
+    {
+        name: "Spice Villa",
+        cuisine: "North Indian",
+        rating: 4.2,
+        location: {
+            city: "Ahmedabad",
+            area: "SG Highway"
+        },
+        menu: ["Paneer Tikka", "Butter Naan", "Dal Makhani"]
+    },
+    {
+        name: "Pizza Corner",
+        cuisine: "Italian",
+        rating: 4.6,
+        location: {
+            city: "Rajkot",
+            area: "University Road"
+        },
+        menu: ["Margherita Pizza", "Farmhouse Pizza", "Garlic Bread"]
+    },
+    {
+        name: "Green Leaf",
+        cuisine: "Gujarati",
+        rating: 4.3,
+        location: {
+            city: "Surat",
+            area: "Vesu"
+        },
+        menu: ["Gujarati Thali", "Dhokla", "Fafda"]
+    }
+])
+
+
+4. Retrieve all documents from the 'restaurants' collection and display them in the mongo shell. Identify which BSON types are used for each field.
+
+-> db.restaurants.find()
+-> BSON Type used
+
+        Field                 BSON Type
+    1.   _id                   ObjectId
+    2.   name                  String
+    3.   cuisine               String
+    4.   rating                Double/Number
+    5.   location              Object
+    6.   menu                  Array
