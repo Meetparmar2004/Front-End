@@ -1,0 +1,117 @@
+Tasks
+
+1. Create a MongoDB collection called 'restaurants' and insert at least 10 documents with fields: name, cuisine, location, and rating. Run a find query to retrieve all restaurants with cuisine 'Italian'.
+
+->  db.restaurants.insertMany([
+        {
+            name: "Pizza Palace",
+            cuisine: "Italian",
+            location: "Surat",
+            rating: 4.8
+        },
+        {
+            name: "Pasta House",
+            cuisine: "Italian",
+            location: "Ahmedabad",
+            rating: 4.5
+        },
+        {
+            name: "Dragon Wok",
+            cuisine: "Chinese",
+            location: "Ahmedabad",
+            rating: 4.6
+        },
+        {
+            name: "Spice Garden",
+            cuisine: "Indian",
+            location: "Surat",
+            rating: 4.3
+        },
+        {
+            name: "Little Italy",
+            cuisine: "Italian",
+            location: "Surat",
+            rating: 4.9
+        },
+        {
+            name: "Golden Dragon",
+            cuisine: "Chinese",
+            location: "Ahmedabad",
+            rating: 4.4
+        },
+        {
+            name: "Burger Point",
+            cuisine: "Fast Food",
+            location: "Rajkot",
+            rating: 4.2
+        },
+        {
+            name: "Italian Corner",
+            cuisine: "Italian",
+            location: "Vadodara",
+            rating: 4.1
+        },
+        {
+            name: "Pizza World",
+            cuisine: "Pizza",
+            location: "Surat",
+            rating: 4.7
+        },
+        {
+            name: "Tandoori Tales",
+            cuisine: "Indian",
+            location: "Ahmedabad",
+            rating: 4.6
+        }
+    ])
+
+
+2. Add a single field index on the 'cuisine' field in the 'restaurants' collection using the createIndex() method. Measure and compare the query execution time for finding all 'Italian' restaurants before and after adding the index.
+
+->  db.restaurants.createIndex({
+        cuisine: 1
+    })
+->  cuisine_1
+->  db.restaurants.find({
+        cuisine: "Italian"
+    }).explain("executionStats")
+
+
+3. Create a compound index on the 'cuisine' and 'location' fields in the 'restaurants' collection. Write a query to find all 'Chinese' restaurants in 'Ahmedabad' and check if the compound index is being used by the query planner.
+
+->  db.restaurants.createIndex({
+        cuisine: 1,
+        location: 1
+    })
+->  db.restaurants.find({
+        cuisine: "Chinese",
+        location: "Ahmedabad"
+    })
+
+
+4. Drop the index you created on the 'cuisine' field and observe how the query performance changes when searching for a specific cuisine. Record your observations in 2-3 lines.
+
+->  db.restaurants.dropIndex("cuisine_1")
+
+
+5. Use ChatGPT to generate a MongoDB query that would efficiently fetch the top 5 highest rated 'Pizza' restaurants in 'Surat', making sure to use any relevant indexes. Paste the generated query and explain in one line how indexing helps in this scenario.
+
+->  db.restaurants.createIndex({
+        cuisine: 1,
+        location: 1,
+        rating: -1
+    })
+
+->  db.restaurants.find({
+        cuisine: "Pizza",
+        location: "Surat"
+    }).sort({
+        rating: -1
+    }).limit(5)
+
+->  db.restaurants.find({
+        cuisine: "Pizza",
+        location: "Surat"
+    }).sort({
+        rating: -1
+    }).limit(5).explain("executionStats")

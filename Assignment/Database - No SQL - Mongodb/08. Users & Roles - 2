@@ -1,0 +1,70 @@
+Tasks
+
+1. Start your local MongoDB server and use the mongo shell to create a new database called instaAppData.
+
+->  use instaAppData
+
+
+2. Inside instaAppData, create a new user named 'playlistAdmin' with password 'music@123' and assign the 'dbAdmin' role — this user should be able to manage playlists and collections, but not read or write actual playlist data.
+
+->  db.createUser({
+        user: "playlistAdmin",
+        pwd: "music@123",
+        roles: [
+            {
+                role: "dbAdmin",
+                db: "instaAppData"
+            }
+        ]
+    })
+
+
+3. Create another user in instaAppData named 'playlistViewer' with password 'view@123' and assign only the 'read' role — this user should only be able to view playlists, not modify or delete them.
+
+->  db.createUser({
+        user: "playlistViewer",
+        pwd: "view@123",
+        roles: [
+            {
+                role: "read",
+                db: "instaAppData"
+            }
+        ]
+    })
+
+
+4. Test authentication by connecting to instaAppData as 'playlistViewer' and try to insert a new playlist document; note the error message and explain why it occurs.
+
+->  mongosh --username playlistViewer --password "view@123" --authenticationDatabase instaAppData
+
+
+5. Use the mongo shell to list all users and their roles in the instaAppData database, and explain in one line what each role allows the user to do.
+
+->  db.getUsers()
+->  {
+        users: [
+            {
+                user: "playlistAdmin",
+                roles: [
+                    {
+                        role: "dbAdmin",
+                        db: "instaAppData"
+                    }
+                ]
+            },
+            {
+                user: "playlistViewer",
+                roles: [
+                    {
+                        role: "read",
+                        db: "instaAppData"
+                    }
+                ]
+            }
+        ],
+        ok: 1
+    }
+
+->  Role            |   Can do
+->  dbAdmin         |   Manage database administration tasks, but not read/write actual data
+->  read            |   Read/view database data but cannot insert, update, or delete

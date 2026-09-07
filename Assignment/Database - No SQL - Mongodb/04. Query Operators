@@ -1,0 +1,82 @@
+Tasks
+
+1. Insert at least 5 documents into a MongoDB collection called playlists, where each document represents a Spotify playlist with fields: name (string), likes (number), genre (string), and followers (number).
+
+->  db.playlists.insertMany([
+        {
+            name: "Today's Top Hits",
+            likes: 2500,
+            genre: "Pop",
+            followers: 12000
+        },
+        {
+            name: "Hip-Hop Central",
+            likes: 1800,
+            genre: "Hip-Hop",
+            followers: 8500
+        },
+        {
+            name: "Chill Vibes",
+            likes: 950,
+            genre: "Lo-Fi",
+            followers: 3200
+        },
+        {
+            name: "Pop Favorites",
+            likes: 1500,
+            genre: "Pop",
+            followers: 6000
+        },
+        {
+            name: "Rock Classics",
+            likes: 700,
+            genre: "Rock",
+            followers: 1800
+        }
+    ])
+
+
+2. Write a MongoDB query using the $gt operator to find all playlists with more than 1000 followers in the playlists collection and display only the name and followers fields.
+
+->  db.playlists.find(
+        { followers: { $gt: 1000 } },
+        { _id: 0, name: 1, followers: 1 }
+    )
+
+
+3. Use the $in operator to find all playlists where the genre is either 'Pop' or 'Hip-Hop' and sort the results by likes in descending order.
+
+->  db.playlists.find({
+        genre: { $in: ["Pop", "Hip-Hop"] }
+    }).sort({
+        likes: -1
+    })
+
+
+4. Query the playlists collection to find playlists with likes between 500 and 2000 (inclusive) using $gte and $lte, then limit the output to the top 3 playlists sorted by followers.
+
+->  db.playlists.find({
+        likes: {
+            $gte: 500,
+            $lte: 2000
+        }
+    }).sort({
+        followers: -1
+    }).limit(3)
+
+
+5. Suppose you want to recommend trending playlists like Spotify does. Write a MongoDB query that finds all playlists with more than 5000 followers and at least 1000 likes, but only show their name and genre. Explain in one line how you combined multiple query operators in your filter.
+
+->  db.playlists.find(
+        {
+            followers: { $gt: 5000 },
+            likes: { $gte: 1000 }
+        },
+        {
+            _id: 0,
+            name: 1,
+            genre: 1
+        }
+    )
+
+-> Multiple operators are combined in the same filter using separate field conditions, so both conditions must be satisfied.

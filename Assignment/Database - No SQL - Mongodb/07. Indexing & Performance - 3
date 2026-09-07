@@ -1,0 +1,100 @@
+Tasks
+
+1. Create a MongoDB collection named 'restaurants' and insert at least 10 documents with fields: name, cuisine, location, and rating. Then, run a find query to retrieve all restaurants with rating above 4.
+
+->  use restaurantDB
+->  db.createCollection("restaurants")
+->  db.restaurants.insertMany([
+    {
+        name: "Pizza Palace",
+        cuisine: "Italian",
+        location: "Surat",
+        rating: 4.8
+    },
+    {
+        name: "Pasta House",
+        cuisine: "Italian",
+        location: "Ahmedabad",
+        rating: 4.5
+    },
+    {
+        name: "Dragon Wok",
+        cuisine: "Chinese",
+        location: "Ahmedabad",
+        rating: 4.6
+    },
+    {
+        name: "Spice Garden",
+        cuisine: "Indian",
+        location: "Surat",
+        rating: 4.3
+    },
+    {
+        name: "Little Italy",
+        cuisine: "Italian",
+        location: "Ahmedabad",
+        rating: 4.9
+    },
+    {
+        name: "Golden Dragon",
+        cuisine: "Chinese",
+        location: "Rajkot",
+        rating: 4.4
+    },
+    {
+        name: "Burger Point",
+        cuisine: "Fast Food",
+        location: "Rajkot",
+        rating: 4.2
+    },
+    {
+        name: "Italian Corner",
+        cuisine: "Italian",
+        location: "Vadodara",
+        rating: 4.1
+    },
+    {
+        name: "Tandoori Tales",
+        cuisine: "Indian",
+        location: "Ahmedabad",
+        rating: 4.6
+    },
+    {
+        name: "Pizza Hub",
+        cuisine: "Italian",
+        location: "Ahmedabad",
+        rating: 4.7
+    }
+    ])
+->  db.restaurants.find({ rating: { $gt: 4 } })
+
+
+2. Add a single field index on the 'cuisine' field in the 'restaurants' collection. Measure and note the time taken to run a find query filtering by cuisine before and after adding the index.
+
+->  db.restaurants.find({ cuisine: "Italian" }).explain("executionStats")
+->  db.restaurants.createIndex({ cuisine: 1 })
+->  cuisine_1
+->  db.restaurants.find({ cuisine: "Italian" }).explain("executionStats")
+
+
+3. Create a compound index on the 'location' and 'rating' fields in the 'restaurants' collection. Then, write and run a query to find all restaurants in 'Ahmedabad' with a rating above 4, and observe the query plan using explain().
+
+->  db.restaurants.createIndex({ location: 1, rating: 1 })
+->  db.restaurants.find({
+    location: "Ahmedabad",
+    rating: { $gt: 4 }
+    })
+
+
+4. Remove the index on 'cuisine' and observe how the query performance changes for cuisine-based searches. Briefly describe your findings in 2-3 sentences.
+
+->  db.restaurants.dropIndex("cuisine_1")
+->  Findings : After removing the cuisine index, MongoDB will generally use a COLLSCAN for the cuisine-only search because the remaining compound index starts with location, not cuisine. On a small collection of 10 documents the actual execution time may change very little, but on a large collection the indexed search would normally examine fewer documents and be faster.
+
+
+5. Create a text index on the 'name' field of the 'restaurants' collection. Then, write a query to search for restaurants whose name contains the word 'Pizza', and display the results.
+
+->  db.restaurants.createIndex({ name: "text" })
+->  db.restaurants.find({
+    $text: { $search: "Pizza" }
+    })

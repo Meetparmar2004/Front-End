@@ -1,0 +1,106 @@
+Tasks
+
+1. Create a MongoDB collection named 'restaurants' and insert 10 documents with fields: name, cuisine, location, and rating.
+
+->  db.restaurants.insertMany([
+        {
+            name: "Pizza Palace",
+            cuisine: "Italian",
+            location: "Surat",
+            rating: 4.8
+        },
+        {
+            name: "Pasta House",
+            cuisine: "Italian",
+            location: "Ahmedabad",
+            rating: 4.5
+        },
+        {
+            name: "Dragon Wok",
+            cuisine: "Chinese",
+            location: "Ahmedabad",
+            rating: 4.6
+        },
+        {
+            name: "Spice Garden",
+            cuisine: "Indian",
+            location: "Surat",
+            rating: 4.3
+        },
+        {
+            name: "Little Italy",
+            cuisine: "Italian",
+            location: "Ahmedabad",
+            rating: 4.9
+        },
+        {
+            name: "Golden Dragon",
+            cuisine: "Chinese",
+            location: "Rajkot",
+            rating: 4.4
+        },
+        {
+            name: "Burger Point",
+            cuisine: "Fast Food",
+            location: "Rajkot",
+            rating: 4.2
+        },
+        {
+            name: "Italian Corner",
+            cuisine: "Italian",
+            location: "Vadodara",
+            rating: 4.1
+        },
+        {
+            name: "Tandoori Tales",
+            cuisine: "Indian",
+            location: "Ahmedabad",
+            rating: 4.6
+        },
+        {
+            name: "Café Delight",
+            cuisine: "Cafe",
+            location: "Ahmedabad",
+            rating: 4.7
+        }
+    ])
+
+
+2. Query the 'restaurants' collection to find all restaurants with cuisine 'Italian' and measure the query execution time using explain('executionStats').
+
+->  db.restaurants.find({
+        cuisine: "Italian"
+    }).explain("executionStats")
+
+
+3. Create an index on the 'cuisine' field in the 'restaurants' collection and rerun the same query as before. Compare the execution time before and after adding the index.
+
+->  db.restaurants.createIndex({
+        cuisine: 1
+    })
+->  cuisine_1
+->  db.restaurants.find({
+        cuisine: "Italian"
+    }).explain("executionStats")
+
+
+4. Add a compound index on 'location' and 'rating' in the 'restaurants' collection. Write a query to find all restaurants in 'Ahmedabad' with a rating above 4, and observe the performance impact using explain().
+
+->  db.restaurants.createIndex({
+        location: 1,
+        rating: 1
+    })
+->  db.restaurants.find({
+        location: "Ahmedabad",
+        rating: { $gt: 4 }
+    }).explain("executionStats")
+
+
+5. Drop all indexes from the 'restaurants' collection except the default _id index and verify by listing the current indexes.
+
+->  db.restaurants.getIndexes()
+->  _id_
+    cuisine_1
+    location_1_rating_1
+
+->  db.restaurants.dropIndexes()

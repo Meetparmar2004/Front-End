@@ -1,0 +1,68 @@
+Tasks
+
+1. Open your MongoDB shell and create a new user for a 'Music Playlist App' database named playlistUser with password 'music123', granting only read access to the database.
+
+->  use music_playlist_app
+->  db.createUser({
+        user: "playlistUser",
+        pwd: "music123",
+        roles: [
+            { role: "read", db: "music_playlist_app" }
+        ]
+    })
+
+
+2. In the MongoDB shell, create an admin user for a 'Food Delivery' database named foodAdmin with password 'zomato@2024', assigning the 'dbAdmin' and 'readWrite' roles.
+
+->  use food_delivery
+->  db.createUser({
+        user: "foodAdmin",
+        pwd: "zomato@2024",
+        roles: [
+            { role: "dbAdmin", db: "food_delivery" },
+            { role: "readWrite", db: "food_delivery" }
+        ]
+    })
+
+
+3. Authenticate as playlistUser in the 'Music Playlist App' database and try to insert a new playlist document. Note the error message and explain why it occurs.
+
+->  mongosh -u playlistUser -p music123 --authenticationDatabase music_playlist_app
+->  use music_playlist_app
+->  db.playlists.insertOne({
+        name: "Chill Music",
+        genre: "Lo-Fi",
+        songs: ["Calm Waters", "Ocean Eyes"]
+    })
+->  Error : MongoServerError: not authorized on music_playlist_app to execute command.
+-> Reason : playlistUser has only the read role.
+
+
+4. Use the db.getUsers() command to list all users in your 'Food Delivery' database and describe the roles assigned to each.
+
+->  db.getUsers()
+->  {
+        users: [
+            {
+                user: "foodAdmin",
+                roles: [
+                    {
+                        role: "dbAdmin",
+                        db: "food_delivery"
+                    },
+                    {
+                        role: "readWrite",
+                        db: "food_delivery"
+                    }
+                ]
+            }
+        ],
+        ok: 1
+    }
+
+
+5. Change the password for playlistUser to 'newmusic456' using the MongoDB shell, and verify that the user can still read but not write data.
+
+->  db.updateUser("playlistUser", {
+        pwd: "newmusic456"
+    })

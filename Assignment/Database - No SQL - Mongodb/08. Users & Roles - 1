@@ -1,0 +1,37 @@
+Tasks
+
+1. Connect to your MongoDB server using the mongo shell and create a new database called insta_clone.
+
+->  use insta_clone
+
+
+2. Inside the insta_clone database, use the createUser command to add a user named 'storyAdmin' with the 'dbAdmin' role for managing Instagram Stories data.
+
+->  db.createUser({
+        user: "storyAdmin",
+        pwd: "storyAdmin123",
+        roles: [
+            { role: "dbAdmin", db: "insta_clone" }
+        ]
+    })
+
+
+3. Create a read-only user called 'feedViewer' in the insta_clone database who can only view (not modify) posts and comments collections.
+
+->  db.createUser({
+        user: "feedViewer",
+        pwd: "feedViewer123",
+        roles: [
+            { role: "read", db: "insta_clone" }
+        ]
+    })  
+
+
+4. Simulate authentication: Log in as 'feedViewer' and try to insert a new document into the posts collection. Note the error message and explain why it occurs.
+
+->  mongosh -u feedViewer -p feedViewer123 --authenticationDatabase insta_clone
+
+
+5. Use the db.getUsers() command to list all users in the insta_clone database and describe the roles assigned to each. Then, briefly explain in your own words the difference between 'read' and 'dbAdmin' roles.
+
+->  db.getUsers()

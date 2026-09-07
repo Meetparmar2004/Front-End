@@ -1,0 +1,143 @@
+Tasks
+
+1. Create a MongoDB collection named 'restaurants' and insert 5 documents, each representing a different restaurant with fields: name, cuisine, location, and average_rating.
+
+->  use foodDeliveryDB
+->  db.createCollection("restaurants")
+->  db.restaurants.insertMany([
+    {
+        name: "Pizza Palace",
+        cuisine: "Italian",
+        location: "Ahmedabad",
+        average_rating: 4.7
+    },
+    {
+        name: "Spice Garden",
+        cuisine: "Indian",
+        location: "Surat",
+        average_rating: 4.5
+    },
+    {
+        name: "Dragon Wok",
+        cuisine: "Chinese",
+        location: "Ahmedabad",
+        average_rating: 4.6
+    },
+    {
+        name: "Burger Hub",
+        cuisine: "Fast Food",
+        location: "Rajkot",
+        average_rating: 4.3
+    },
+    {
+        name: "Royal Biryani",
+        cuisine: "Indian",
+        location: "Vadodara",
+        average_rating: 4.8
+    }
+    ])
+->  db.restaurants.find()
+
+
+2. Design an 'orders' collection for a food delivery app (like Zomato or Swiggy) where each order document includes: user_id, restaurant_id, items (array of objects with item_name and price), total_amount, and order_date. Insert 3 sample orders.
+
+->  db.createCollection("orders")
+->  db.orders.insertMany([
+    {
+        user_id: 101,
+        restaurant_id: 1,
+        items: [
+        { item_name: "Margherita Pizza", price: 250 },
+        { item_name: "Garlic Bread", price: 120 }
+        ],
+        total_amount: 370,
+        order_date: new Date("2026-09-01")
+    },
+    {
+        user_id: 102,
+        restaurant_id: 2,
+        items: [
+        { item_name: "Paneer Tikka", price: 220 },
+        { item_name: "Butter Naan", price: 80 }
+        ],
+        total_amount: 300,
+        order_date: new Date("2026-09-02")
+    },
+    {
+        user_id: 103,
+        restaurant_id: 1,
+        items: [
+        { item_name: "Farmhouse Pizza", price: 350 },
+        { item_name: "Cold Drink", price: 80 }
+        ],
+        total_amount: 430,
+        order_date: new Date("2026-09-03")
+    }
+    ])
+->  db.orders.find()
+
+
+3. Write a MongoDB aggregation query to calculate the total number of orders placed for each restaurant in the 'orders' collection and display the restaurant_id with its corresponding order count.
+
+->  db.orders.aggregate([
+    {
+        $group: {
+        _id: "$restaurant_id",
+        order_count: { $sum: 1 }
+        }
+    }
+    ])
+
+
+4. Generate a report using MongoDB aggregation that finds the top 2 restaurants with the highest average order amount from your 'orders' collection.
+
+->  db.orders.aggregate([
+    {
+        $group: {
+        _id: "$restaurant_id",
+        average_order_amount: {
+            $avg: "$total_amount"
+        }
+        }
+    },
+    {
+        $sort: {
+        average_order_amount: -1
+        }
+    },
+    {
+        $limit: 2
+    }
+    ])
+
+
+5. Refactor your 'orders' collection to include a 'delivery_status' field (values: 'pending', 'out for delivery', 'delivered'). Update all existing orders to randomly assign one of these statuses, then write a query to count how many orders are currently 'pending'.
+
+->  db.orders.updateMany(
+    {},
+    [
+        {
+        $set: {
+            delivery_status: {
+            $switch: {
+                branches: [
+                {
+                    case: { $lt: [{ $rand: {} }, 0.33] },
+                    then: "pending"
+                },
+                {
+                    case: { $lt: [{ $rand: {} }, 0.66] },
+                    then: "out for delivery"
+                }
+                ],
+                default: "delivered"
+            }
+            }
+        }
+        }
+    ]
+    )
+->  db.orders.find()
+->  db.orders.countDocuments({
+    delivery_status: "pending"
+    })
