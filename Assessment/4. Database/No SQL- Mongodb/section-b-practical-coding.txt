@@ -1,0 +1,280 @@
+Section B — Practical Coding Tasks
+===================================
+
+Task 1: Set Up the QuickEats Restaurant Database
+-------------------------------------------------
+
+Question:
+Create a MongoDB database and insert a set of restaurant documents to form the data foundation of the QuickEats food delivery platform.
+- Create a database called quickeats_db and a collection called restaurants.
+- Insert at least 5 restaurant documents using insertMany. Each document must include: name (string), cuisine (string), city (string), rating (number between 1–5), isOpen (boolean), and menu (array of at least 2 items, each with itemName and price).
+- Use find() with no filter to display all inserted documents and verify the output with a screenshot.
+
+Answer:
+
+->  use quickeats_db
+
+->  db.restaurants.insertMany([
+      {
+        name: "Spice Garden",
+        cuisine: "North Indian",
+        city: "Pune",
+        rating: 4.5,
+        isOpen: true,
+        menu: [
+          { itemName: "Paneer Butter Masala", price: 220 },
+          { itemName: "Garlic Naan", price: 45 }
+        ]
+      },
+      {
+        name: "Pizza Hub",
+        cuisine: "Italian",
+        city: "Mumbai",
+        rating: 4.2,
+        isOpen: true,
+        menu: [
+          { itemName: "Margherita Pizza", price: 299 },
+          { itemName: "Pasta Alfredo", price: 250 }
+        ]
+      },
+      {
+        name: "Dragon Wok",
+        cuisine: "Chinese",
+        city: "Pune",
+        rating: 4.0,
+        isOpen: false,
+        menu: [
+          { itemName: "Veg Fried Rice", price: 180 },
+          { itemName: "Manchurian", price: 160 }
+        ]
+      },
+      {
+        name: "Burger Point",
+        cuisine: "Fast Food",
+        city: "Bangalore",
+        rating: 3.8,
+        isOpen: true,
+        menu: [
+          { itemName: "Veg Burger", price: 120 },
+          { itemName: "French Fries", price: 90 }
+        ]
+      },
+      {
+        name: "South Spice",
+        cuisine: "South Indian",
+        city: "Chennai",
+        rating: 4.7,
+        isOpen: true,
+        menu: [
+          { itemName: "Masala Dosa", price: 80 },
+          { itemName: "Filter Coffee", price: 40 }
+        ]
+      }
+    ])
+
+// find() with no filter to verify all documents
+->  db.restaurants.find()
+
+
+
+Task 2: Query and Filter Orders Using Operators
+------------------------------------------------
+
+Question:
+Apply MongoDB query operators to retrieve specific subsets of order data from the QuickEats orders collection.
+- Insert at least 8 order documents into an orders collection. Each order must include: customerId (string), restaurantName (string), items (array of objects), totalAmount (number), status (one of 'pending', 'confirmed', 'delivered'), and orderDate (ISODate).
+- Write a query using $gt and $eq to find all orders with totalAmount greater than Rs 400 and status equal to 'delivered'.
+- Write a separate query using $in to find orders where status is either 'pending' or 'confirmed'.
+- Add projection to return only customerId, totalAmount, and status. Sort by totalAmount descending and limit the result to 5 documents.
+
+Answer:
+
+->  use quickeats_db
+
+// Insert at least 8 orders
+->  db.orders.insertMany([
+      {
+        customerId: "C001",
+        restaurantName: "Spice Garden",
+        items: [{ name: "Paneer Butter Masala", qty: 1, price: 220 }],
+        totalAmount: 220,
+        status: "delivered",
+        orderDate: ISODate("2026-03-01T12:00:00Z")
+      },
+      {
+        customerId: "C002",
+        restaurantName: "Pizza Hub",
+        items: [{ name: "Margherita Pizza", qty: 2, price: 299 }],
+        totalAmount: 598,
+        status: "delivered",
+        orderDate: ISODate("2026-03-02T14:30:00Z")
+      },
+      {
+        customerId: "C003",
+        restaurantName: "Dragon Wok",
+        items: [{ name: "Veg Fried Rice", qty: 1, price: 180 }],
+        totalAmount: 180,
+        status: "pending",
+        orderDate: ISODate("2026-03-03T19:00:00Z")
+      },
+      {
+        customerId: "C001",
+        restaurantName: "Burger Point",
+        items: [{ name: "Veg Burger", qty: 3, price: 120 }],
+        totalAmount: 360,
+        status: "confirmed",
+        orderDate: ISODate("2026-03-04T13:00:00Z")
+      },
+      {
+        customerId: "C004",
+        restaurantName: "South Spice",
+        items: [{ name: "Masala Dosa", qty: 2, price: 80 }],
+        totalAmount: 160,
+        status: "delivered",
+        orderDate: ISODate("2026-03-05T09:00:00Z")
+      },
+      {
+        customerId: "C005",
+        restaurantName: "Pizza Hub",
+        items: [{ name: "Pasta Alfredo", qty: 1, price: 250 }],
+        totalAmount: 450,
+        status: "pending",
+        orderDate: ISODate("2026-03-06T20:00:00Z")
+      },
+      {
+        customerId: "C002",
+        restaurantName: "Spice Garden",
+        items: [{ name: "Garlic Naan", qty: 4, price: 45 }],
+        totalAmount: 520,
+        status: "delivered",
+        orderDate: ISODate("2026-03-07T18:00:00Z")
+      },
+      {
+        customerId: "C006",
+        restaurantName: "Dragon Wok",
+        items: [{ name: "Manchurian", qty: 2, price: 160 }],
+        totalAmount: 320,
+        status: "confirmed",
+        orderDate: ISODate("2026-03-08T21:00:00Z")
+      }
+    ])
+
+
+// Query 1: $gt and $eq — totalAmount > 400 AND status = 'delivered'
+
+->  db.orders.find({
+      totalAmount: { $gt: 400 },
+      status: { $eq: "delivered" }
+    })
+
+
+// Query 2: $in — status pending or confirmed
+// with projection, sort descending, limit 5
+
+->  db.orders.find(
+      { status: { $in: ["pending", "confirmed"] } },
+      { customerId: 1, totalAmount: 1, status: 1, _id: 0 }
+    ).sort({ totalAmount: -1 }).limit(5)
+
+
+
+Task 3: Update Order Records Using Update Operators
+----------------------------------------------------
+
+Question:
+Modify existing order documents in the orders collection to reflect real-time status changes in the QuickEats delivery workflow.
+- Use updateOne with $set to change the status of one 'pending' order to 'confirmed' and add a confirmedAt field set to the current date.
+- Use updateMany with $set to mark all 'confirmed' orders as 'delivered' (simulate a batch dispatch update).
+- Use $push to add a new entry {event: 'dispatched', time: new Date()} to a deliveryLog array inside one specific order document.
+- Use $unset to remove the confirmedAt field from at least one order. Verify all changes by running find() queries after each update.
+
+Answer:
+
+// 1. updateOne with $set — one pending order to confirmed + confirmedAt
+->  db.orders.updateOne(
+      { status: "pending" },
+      {
+        $set: {
+          status: "confirmed",
+          confirmedAt: new Date()
+        }
+      }
+    )
+
+->  db.orders.find({ status: "confirmed" })
+
+// 2. updateMany with $set — all confirmed orders to delivered
+->  db.orders.updateMany(
+      { status: "confirmed" },
+      { $set: { status: "delivered" } }
+    )
+
+->  db.orders.find({ status: "delivered" })
+
+// 3. $push — add dispatched entry to deliveryLog on one specific order
+->  db.orders.updateOne(
+      { customerId: "C001" },
+      {
+        $push: {
+          deliveryLog: {
+            event: "dispatched",
+            time: new Date()
+          }
+        }
+      }
+    )
+
+->  db.orders.find({ customerId: "C001" })
+
+// 4. $unset — remove confirmedAt from at least one order
+->  db.orders.updateOne(
+      { confirmedAt: { $exists: true } },
+      { $unset: { confirmedAt: "" } }
+    )
+
+->  db.orders.find({ confirmedAt: { $exists: true } })
+
+
+
+Task 4: Restaurant Revenue Report Using Aggregation
+----------------------------------------------------
+
+Question:
+Build a multi-stage aggregation pipeline on the orders collection to generate a restaurant-wise revenue summary for the QuickEats admin panel.
+- Use $match as the first stage to filter only orders with status 'delivered'.
+- Use $group to group filtered orders by restaurantName, computing totalRevenue as the sum of totalAmount and orderCount as the count of documents per group.
+- Use $project to shape the output: display restaurantName, totalRevenue, and orderCount; suppress the default _id field.
+- Use $sort to sort the final output by totalRevenue descending, then $limit to show only the top 3 restaurants. Run the pipeline and screenshot the result.
+
+Answer:
+
+->  db.orders.aggregate([
+      {
+        $match: {
+          status: "delivered"
+        }
+      },
+      {
+        $group: {
+          _id: "$restaurantName",
+          totalRevenue: { $sum: "$totalAmount" },
+          orderCount: { $sum: 1 }
+        }
+      },
+      {
+        $project: {
+          _id: 0,
+          restaurantName: "$_id",
+          totalRevenue: 1,
+          orderCount: 1
+        }
+      },
+      {
+        $sort: {
+          totalRevenue: -1
+        }
+      },
+      {
+        $limit: 3
+      }
+    ])
