@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Pizza Palace",
+    "cuisine": "Italian",
+    "rating": 4.8
+  },
+  {
+    "name": "Spice Garden",
+    "cuisine": "Indian",
+    "rating": 4.5
+  },
+  {
+    "name": "Dragon Wok",
+    "cuisine": "Chinese",
+    "rating": 4.6
+  },
+  {
+    "name": "Burger Hub",
+    "cuisine": "Fast Food",
+    "rating": 4.3
+  },
+  {
+    "name": "Pasta House",
+    "cuisine": "Italian",
+    "rating": 4.7
+  },
+  {
+    "name": "Tandoori Tales",
+    "cuisine": "Indian",
+    "rating": 4.4
+  },
+  {
+    "name": "The Food Factory",
+    "cuisine": "Multi Cuisine",
+    "rating": 4.2
+  },
+  {
+    "name": "Sushi World",
+    "cuisine": "Japanese",
+    "rating": 4.9
+  },
+  {
+    "name": "Royal Biryani",
+    "cuisine": "Indian",
+    "rating": 4.6
+  },
+  {
+    "name": "Pizza Corner",
+    "cuisine": "Italian",
+    "rating": 4.5
+  }
+]
