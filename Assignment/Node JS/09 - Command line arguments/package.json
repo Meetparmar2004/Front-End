@@ -1,0 +1,9 @@
+{
+  "name": "09-command-line-arguments",
+  "version": "1.0.0",
+  "description": "Command line arguments assignment",
+  "main": "greet.js",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
+}

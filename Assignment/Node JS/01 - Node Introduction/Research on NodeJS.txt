@@ -1,0 +1,10 @@
+Task 
+
+4. Research and write a short note (3-4 lines) on how Node.js handles multiple client requests at the same time, mentioning the concept of event-driven non-blocking architecture.<br><br><em><strong>Hint:</strong> Focus on the event loop and single-threaded model.</em>
+
+
+Ans : 
+    --> Node.js uses an event-driven, non-blocking architecture to handle multiple client requests efficiently.
+    --> Its single-threaded event loop monitors requests and processes callbacks when asynchronous operations complete.
+    --> File and network operations run asynchronously, so they do not block other requests.
+    --> This enables Node.js to serve many clients concurrently without creating a separate thread for each request.

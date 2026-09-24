@@ -1,0 +1,9 @@
+{
+  "name": "08-file-local-module",
+  "version": "1.0.0",
+  "description": "File and local module assignment",
+  "main": "app.js",
+  "dependencies": {
+    "validator": "^13.12.0"
+  }
+}
