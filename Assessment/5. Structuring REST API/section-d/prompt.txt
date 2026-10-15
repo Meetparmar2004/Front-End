@@ -1,0 +1,7 @@
+Prompt I gave the AI:
+
+Write a small Node.js Express API with one route POST /api/orders.
+The body should have customerId (string), restaurantId (string) and menuItems (array of item ids, cannot be empty).
+If any field is missing or menuItems is empty, return HTTP 400 with a clear message.
+If the body is valid, sign a JWT that contains the order details and expires in 15 minutes, and return HTTP 200 with the token.
+Use the jsonwebtoken package.

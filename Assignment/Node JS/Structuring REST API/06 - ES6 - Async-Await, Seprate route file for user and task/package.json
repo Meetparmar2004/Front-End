@@ -1,0 +1,12 @@
+{
+  "name": "playlist-routes-demo",
+  "version": "1.0.0",
+  "description": "Practice for async/await and separate route files",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

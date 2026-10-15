@@ -1,0 +1,12 @@
+{
+  "name": "section-d-orders",
+  "version": "1.0.0",
+  "main": "fixed-orders.js",
+  "scripts": {
+    "start": "node fixed-orders.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

@@ -1,0 +1,3 @@
+What I changed:
+The AI checked menuItems with if (!menuItems). An empty array is still truthy in JavaScript, so [] passed validation and still got a token. I changed it to Array.isArray and length > 0, and I also checked that customerId and restaurantId are non-empty strings.
+The AI used expiresIn: 15. In jsonwebtoken a number means seconds, so the token died after 15 seconds. I changed it to "15m" so it lasts 15 minutes like the question asked.

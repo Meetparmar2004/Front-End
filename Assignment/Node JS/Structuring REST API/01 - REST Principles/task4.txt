@@ -1,0 +1,19 @@
+Question:
+Review the following API contract for a Movie Booking app and identify two violations of REST principles:
+1. POST /getMovies
+2. GET /deleteBooking/{id}
+3. PUT /addUser
+4. DELETE /bookings/{id}
+
+Hint: Look for incorrect HTTP method usage and non-resourceful endpoint names.
+
+Answer:
+Two violations:
+
+1. POST /getMovies is wrong. Getting movies is a read operation, so the method should be GET. The URL also has a verb (getMovies). It should be something like GET /movies.
+
+2. GET /deleteBooking/{id} is wrong. Deleting should use DELETE, not GET. The name deleteBooking is also an action, not a resource. The correct one is already shown in point 4: DELETE /bookings/{id}.
+
+Point 4 (DELETE /bookings/{id}) follows REST. Method is DELETE and the path uses a plural resource name.
+
+(PUT /addUser is also wrong. Adding a user should be POST /users, because PUT is for update and the path should not start with a verb like add.)

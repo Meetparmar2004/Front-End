@@ -1,0 +1,20 @@
+Question:
+List 5 daily actions you perform in any one app (like Instagram, Zomato, or Flipkart), and for each, identify which HTTP method (GET, POST, PUT, DELETE) would be used if that action was implemented as a REST API endpoint.
+
+Answer:
+I used Instagram for this. These are 5 things I do almost every day and the HTTP method I would use if each one was a REST API.
+
+1. Open the home feed and see posts - GET
+   I am only reading data, not changing anything.
+
+2. Like a post - POST
+   Liking creates a new like on that post.
+
+3. Comment on a post - POST
+   A new comment is being created.
+
+4. Edit my bio in profile - PUT
+   I am updating data that already exists.
+
+5. Delete a comment I posted - DELETE
+   I am removing that comment.

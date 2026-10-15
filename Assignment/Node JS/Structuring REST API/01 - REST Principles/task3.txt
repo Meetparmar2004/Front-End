@@ -1,0 +1,18 @@
+Question:
+Given this scenario: A user wants to update their delivery address in a food delivery app (like Swiggy). Write the API endpoint URL, the HTTP method, and a sample JSON request body for this operation.
+
+Answer:
+Endpoint: /users/{userId}/addresses/{addressId}
+HTTP method: PUT
+Reason: the address already exists, so we update it. We do not create a new one.
+
+Sample request body:
+
+{
+  "houseNo": "12B",
+  "street": "MG Road",
+  "area": "Koramangala",
+  "city": "Bengaluru",
+  "pincode": "560034",
+  "landmark": "Near Forum Mall"
+}

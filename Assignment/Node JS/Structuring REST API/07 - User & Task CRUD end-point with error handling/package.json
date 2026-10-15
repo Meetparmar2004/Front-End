@@ -1,0 +1,12 @@
+{
+  "name": "crud-error-demo",
+  "version": "1.0.0",
+  "description": "Playlist, movie and other CRUD endpoints with error handling",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

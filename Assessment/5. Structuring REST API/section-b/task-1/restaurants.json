@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Spice Hub", "cuisine": "Indian" },
+  { "id": 2, "name": "Pasta Corner", "cuisine": "Italian" },
+  { "id": 3, "name": "Sushi Bar", "cuisine": "Japanese" }
+]

@@ -1,0 +1,17 @@
+Question:
+Design an API contract for a Playlist feature like Spotify: define the endpoints (URL paths), HTTP methods, and a short description for each action (e.g., create playlist, add song, remove song, get playlist details) in a table format.
+
+Hint: Focus on RESTful naming conventions and use plural nouns for resources.
+
+Answer:
+Playlist feature (like Spotify). Resource names are plural nouns.
+
+Action              | HTTP Method | Endpoint                                  | Description
+--------------------|-------------|-------------------------------------------|------------------------------------------
+Create playlist     | POST        | /playlists                                | Create a new playlist
+Get all playlists   | GET         | /playlists                                | Get the list of playlists
+Get playlist details| GET         | /playlists/{id}                           | Get one playlist with its songs
+Update playlist     | PUT         | /playlists/{id}                           | Change playlist name or details
+Delete playlist     | DELETE      | /playlists/{id}                           | Delete the whole playlist
+Add song            | POST        | /playlists/{id}/songs                     | Add a song into a playlist
+Remove song         | DELETE      | /playlists/{playlistId}/songs/{songId}    | Remove one song from the playlist

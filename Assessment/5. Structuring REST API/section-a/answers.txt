@@ -1,0 +1,48 @@
+Section A — Concept Application
+
+Q1. Why would you refactor this code to use async/await instead of nested callbacks, and how does async/await improve both the readability and error-handling of your Node.js application?
+
+Ans:
+Nested callbacks get messy because every next step is written inside the previous function. The code keeps indenting and it is hard to see what runs first. async/await lets me write the same steps in a straight line, so it reads more like normal code.
+
+For errors, callbacks need an if (err) check in every function. With async/await I can use one try/catch around the awaits. If order status, driver location, or the restaurant update fails, that one catch block can handle it.
+
+
+Q2. How would you implement error handling in this Node.js async module to ensure any failure — including network errors and unexpected gateway responses — is caught and returned to the caller without crashing the server process?
+
+Ans:
+I would put the payment gateway call inside try/catch. Network errors and timeouts land in the catch block. After the call returns I would also check the response. If the gateway sends something unexpected, I throw an error so it is caught in the same place.
+
+Then I send that error back to the caller as a JSON response. I would not leave the promise without a catch, because an unhandled rejection can stop the Node process. In Express I pass the error with next(err). The error middleware sends the response and the server stays up.
+
+
+Q3. How would you design a custom Express middleware function for this logging requirement, and where in the middleware chain should it be placed to ensure all requests are captured, including those rejected early?
+
+Ans:
+The middleware would look like function (req, res, next). When a request comes in I store Date.now() and log req.method, req.url, and a timestamp. Then I call next() so the rest of the app can run. I also listen for res.on('finish') and subtract the start time to get the response time.
+
+I would register this middleware with app.use() before routes and before authentication. If it is first, it still runs when a request is rejected early and never reaches a route handler.
+
+
+Q4. How would you structure this Express application using an MVC pattern to separate routing from controller logic, and what advantage does this separation provide when the same business logic must serve multiple clients?
+
+Ans:
+Routes should only connect a URL and method to a function. For example routes/menu.js maps GET /restaurants/:id/menu to a controller. The controller file holds the actual logic.
+
+This helps when the mobile app and the admin panel need the same behaviour. Both can use the same controller function, so I do not copy the handler into two route files. If the logic changes, I update it in one place.
+
+
+Q5. How does JWT-based authentication allow a stateless Node.js REST API to verify a user's identity on every request, and what information is appropriate to store in the JWT payload versus what should never be included?
+
+Ans:
+On login the server signs a token with a secret and sends it to the client. The server does not store a session. On later requests the client sends Authorization: Bearer <token>. The server verifies the signature and expiry. If it is valid, the user id in the token is trusted.
+
+I would only put small details in the payload, like user id, email, and role. I would never put the password, card details, or the secret key in it. Anyone can decode a JWT. The signature only shows that the data was not edited.
+
+
+Q6. How would you configure multer in Express to enforce file type and size limits on the upload endpoint, and why is server-side validation still necessary even when the frontend already enforces these same constraints?
+
+Ans:
+I would set multer limits.fileSize to 2 * 1024 * 1024 and use fileFilter so only .jpg, .png, and .pdf are accepted. If the file fails, the API returns HTTP 400 with a message.
+
+The frontend check is not enough because a user can skip the UI and call the API directly from Postman or curl. The server has to check the file itself.
