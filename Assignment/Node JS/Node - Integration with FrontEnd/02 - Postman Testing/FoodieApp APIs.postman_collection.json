@@ -1,0 +1,102 @@
+{
+  "info": {
+    "_postman_id": "b7e1c4a2-9f30-4d18-8a6e-2c5f0b9d1e73",
+    "name": "FoodieApp APIs",
+    "description": "My collection for the Postman assignment. I kept my FoodieApp test requests here. The URLs use jsonplaceholder, which is a dummy API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all posts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts"
+          ]
+        },
+        "description": "Gets all posts. I used this to check that the status is 200 and the body is an array of posts."
+      },
+      "response": []
+    },
+    {
+      "name": "Add a new user",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Test User\",\n  \"email\": \"testuser@foodie.com\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/users",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "users"
+          ]
+        },
+        "description": "Adds a user with a name and email. I checked that the response body includes the same name and email I sent."
+      },
+      "response": []
+    },
+    {
+      "name": "Update a post",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 1,\n  \"title\": \"Updated food post\",\n  \"body\": \"Changed the post text\",\n  \"userId\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com/posts/1",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ],
+          "path": [
+            "posts",
+            "1"
+          ]
+        },
+        "description": "Updates post 1. I saved this so the collection also has a PUT request, not only GET and POST."
+      },
+      "response": []
+    }
+  ]
+}

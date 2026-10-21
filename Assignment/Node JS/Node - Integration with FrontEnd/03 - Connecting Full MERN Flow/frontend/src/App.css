@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+}
+
+main {
+  max-width: 640px;
+  margin: 32px auto;
+  padding: 0 16px 40px;
+}
+
+section {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 16px 20px 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 8px 14px;
+  background: #0b57d0;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+.saved p {
+  margin: 6px 0;
+}

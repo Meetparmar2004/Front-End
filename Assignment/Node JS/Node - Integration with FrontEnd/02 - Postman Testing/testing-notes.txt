@@ -1,0 +1,59 @@
+02 - Postman Testing
+
+Task 1
+I installed Postman and created a collection named FoodieApp APIs.
+All of my requests for this assignment are inside that collection.
+
+Task 2
+Request: GET https://jsonplaceholder.typicode.com/posts
+
+I clicked Send and checked the response.
+Status: 200 OK
+The Body tab shows a JSON array, not one single post.
+There are 100 posts in the array.
+The first one looks like this:
+- id: 1
+- title: sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+
+Task 3
+Request: POST https://jsonplaceholder.typicode.com/users
+Header: Content-Type = application/json
+
+Body I sent:
+{
+  "name": "Test User",
+  "email": "testuser@foodie.com"
+}
+
+Status: 201 Created
+The response included the name and email I sent, and it also added an id:
+
+{
+  "name": "Test User",
+  "email": "testuser@foodie.com",
+  "id": 11
+}
+
+Task 4
+I saved three requests in the FoodieApp APIs collection and wrote a short description on each one:
+
+1. Get all posts (GET) - gets the list of posts so I can check the status and the array.
+2. Add a new user (POST) - sends a name and email and checks that they come back.
+3. Update a post (PUT) - updates post 1. I added this so I have a third method, not only GET and POST.
+
+PUT result:
+Status: 200 OK
+The response body had the title and body I sent:
+{
+  "id": 1,
+  "title": "Updated food post",
+  "body": "Changed the post text",
+  "userId": 1
+}
+
+Task 5
+I exported the collection from the collection menu (Export) and saved this file:
+
+FoodieApp APIs.postman_collection.json
+
+A classmate can import that file in Postman with Import, then open the FoodieApp APIs collection.

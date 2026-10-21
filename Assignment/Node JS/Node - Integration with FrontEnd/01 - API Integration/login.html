@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f4f6f8;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      width: 360px;
+      border: 1px solid #ddd;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 14px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 8px 14px;
+      background: #0b57d0;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    #message {
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Login</h1>
+  <p>
+    Task 3: this page should be opened on port 3000.
+    The form sends data to port 5000, which causes a CORS error.
+    I am not fixing that error. I only wrote it down in task3-cors-error.txt.
+  </p>
+
+  <form id="loginForm">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    var form = document.getElementById('loginForm');
+    var message = document.getElementById('message');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var loginData = {
+        username: document.getElementById('username').value,
+        password: document.getElementById('password').value
+      };
+
+      message.textContent = 'Trying to login... Check the console for the CORS error.';
+
+      // frontend is on localhost:3000, this API is on localhost:5000
+      fetch('http://localhost:5000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(loginData)
+      })
+        .then(function (response) {
+          message.textContent = 'Request finished with status ' + response.status;
+        })
+        .catch(function (error) {
+          console.log(error);
+          message.style.color = 'red';
+          message.textContent = 'Request blocked. Open the console to see the CORS error.';
+        });
+    });
+  </script>
+</body>
+</html>

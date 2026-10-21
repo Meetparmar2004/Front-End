@@ -1,0 +1,25 @@
+Task 3 - CORS error
+
+What I did
+I started the frontend with `node frontend-server.js` (port 3000)
+and the login API with `node server.js` (port 5000).
+Then I opened http://localhost:3000/login.html, filled in a username and password, and clicked Login.
+
+The page tried to POST JSON to http://localhost:5000/login.
+In the API terminal I only saw:
+
+OPTIONS /login
+
+The real POST did not go through. The browser sends OPTIONS first (a preflight) because the request uses Content-Type: application/json and the API is on another port. My server does not send Access-Control-Allow-Origin, so the browser blocks it.
+
+Error from the browser console
+
+Access to fetch at 'http://localhost:5000/login' from origin 'http://localhost:3000' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+
+POST http://localhost:5000/login net::ERR_FAILED
+
+TypeError: Failed to fetch
+
+The page also shows: "Request blocked. Open the console to see the CORS error."
+
+I did not fix this. The task only asks to record the error.
