@@ -1,0 +1,14 @@
+{
+  "name": "stayez",
+  "version": "1.0.0",
+  "description": "A simple Express API for vacation rental rooms",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "type": "commonjs"
+}

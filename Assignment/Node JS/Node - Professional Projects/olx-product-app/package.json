@@ -1,0 +1,15 @@
+{
+  "name": "olx-product-app",
+  "version": "1.0.0",
+  "description": "A simple Express API for product listings and image uploads",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  },
+  "type": "commonjs"
+}

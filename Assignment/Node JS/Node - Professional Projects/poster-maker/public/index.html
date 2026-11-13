@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Poster Maker</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: system-ui, sans-serif;
+        color: #24212b;
+        background: #f6f3fb;
+      }
+
+      body {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 64px 24px;
+      }
+
+      main {
+        padding: 40px;
+        border: 1px solid #e7e0f0;
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: 0 16px 48px rgb(46 31 68 / 8%);
+      }
+
+      h1 {
+        margin-top: 0;
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        letter-spacing: -0.06em;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      code {
+        padding: 2px 6px;
+        border-radius: 5px;
+        background: #f1edf7;
+      }
+
+      a {
+        color: #6941a5;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>YOUR IDEAS, YOUR CANVAS</p>
+      <h1>Poster Maker</h1>
+      <p>Browse a template, add your own words, and make the design yours.</p>
+      <h2>Get started with the API</h2>
+      <ul>
+        <li><a href="/templates">Browse poster templates</a> with <code>GET /templates</code>.</li>
+        <li>Create a design with <code>POST /design</code> and JSON containing <code>text</code> and <code>templateId</code>.</li>
+        <li>Change its background using <code>PATCH /design/:designId/color</code>.</li>
+        <li>Upload a logo using <code>POST /upload</code> with an <code>image</code> file field.</li>
+      </ul>
+    </main>
+  </body>
+</html>

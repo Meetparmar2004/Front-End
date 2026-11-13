@@ -1,0 +1,14 @@
+{
+  "name": "movie-booking-app",
+  "version": "1.0.0",
+  "description": "A simple Express API for movie listings and ticket bookings",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "type": "commonjs"
+}
